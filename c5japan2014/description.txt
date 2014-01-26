@@ -1,2 +1,2 @@
 concrete5 Japan 2014
-bootstrap3 ベースのテーマ
+Bootstrap3 ベースのテーマ
