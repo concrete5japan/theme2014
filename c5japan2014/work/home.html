@@ -14,25 +14,29 @@
 <body>
 <div class="container">
 	<header>
-		<div class="col-sm-6">
+		<div class="col-sm-7">
 			<h1 class="site-logo"><a href="http://concrete5-japan.org/"><img src="http://concrete5-japan.org/themes/c5japan2011/images/c5japanlogo.png" alt="concrete5 日本語公式サイト トップへ"></a></h1>
 		</div>
-		<div class="col-sm-6">
-			<aside class="search">
-				<form action="http://www.google.co.jp/cse" id="cse-search-box" target="_blank">
-					<input type="hidden" name="cx" value="partner-pub-9838343653530325:5ay760-i2hu">
-					<input type="hidden" name="ie" value="UTF-8">
-					<input type="text" name="q" size="20">
-					<input type="submit" name="sa" value="検索">
-				</form>
-			</aside>
-			<aside class="header-sns-link">
-				<ul class="sns-link">
-					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
-				</ul>
-			</aside>
+		<div class="col-sm-5">
+			<div class="col-sm-8">
+				<aside class="search">
+					<form action="http://www.google.co.jp/cse" id="cse-search-box" target="_blank">
+						<input type="hidden" name="cx" value="partner-pub-9838343653530325:5ay760-i2hu">
+						<input type="hidden" name="ie" value="UTF-8">
+						<input type="text" class="form-control" placeholder="Search">
+						<i class="fa fa-search"></i> 
+					</form>
+				</aside>
+			</div>
+			<div class="col-sm-4">
+				<aside class="sns-link">
+					<ul class="fa-ul">
+						<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
+					</ul>
+				</aside>
+			</div>
 		</div>
 	</header>
 </div><!--container-->
@@ -40,7 +44,7 @@
 <div class="container">
 	<div class="col-sm-9">
 		<nav class="header-nav">
-			<ul class="nav-header">
+			<ul class="fa-ul">
 				<li><a href="/" target="_self"><i class="fa fa-home"></i> ホーム</a></li>
 				<li><a href="/about/" target="_self"><i class="fa fa-lightbulb-o"></i> concrete5とは</a></li>
 				<li><a href="/help/" target="_self"><i class="fa fa-bookmark"></i> 使い方</a></li></li>
@@ -52,9 +56,8 @@
 	</div>
 	<div class="col-sm-3">
 		<aside class="header-login">
-			<ul class="login">
-				<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
-				<li><a href="/register/?rcID=1"><i class="fa fa-user"></i> 新規登録</a></li>
+			<ul class="fa-ul">
+				<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>　|　<li><a href="/register/?rcID=1"><i class="fa fa-user"></i> 新規登録</a></li>
 			</ul>
 		</aside>
 	</div>

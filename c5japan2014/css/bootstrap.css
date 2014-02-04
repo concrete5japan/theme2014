@@ -7144,3 +7144,85 @@ td.visible-print {
 .home-footer {
   background-color: #403e43;
 }
+
+.search {
+  position: relative;
+  height: 71px;
+  margin-top: 20px;
+}
+
+.search .form-control {
+  height: 32px;
+}
+
+.search i.fa-search {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 1.5em;
+  color: #777777;
+}
+
+.sns-link {
+  margin-top: 18px;
+  text-align: right;
+}
+
+.sns-link ul.fa-ul {
+  margin: 0;
+}
+
+.sns-link ul.fa-ul li {
+  display: inline;
+  padding-left: 5px;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.sns-link ul.fa-ul li a {
+  color: #777777;
+}
+
+.sns-link ul.fa-ul li a:hover {
+  color: #00aced;
+}
+
+.header-nav {
+  margin-top: 25px;
+}
+
+.header-nav ul.fa-ul {
+  margin-left: 0;
+}
+
+.header-nav ul.fa-ul li {
+  display: inline;
+  padding-right: 25px;
+}
+
+.header-nav ul.fa-ul li a {
+  color: #20bde8;
+  text-decoration: none;
+}
+
+.header-nav ul.fa-ul li a:hover {
+  color: #fb6f83;
+}
+
+.header-login {
+  margin-top: 25px;
+  text-align: right;
+}
+
+.header-login ul.fa-ul li {
+  display: inline;
+}
+
+.header-login ul.fa-ul li a {
+  color: #777777;
+  text-decoration: none;
+}
+
+.header-login ul.fa-ul li a:hover {
+  color: #00aced;
+}
