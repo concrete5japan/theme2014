@@ -7133,6 +7133,14 @@ td.visible-print {
   margin-top: 20px;
 }
 
+.btn-navy .icon-btn-navy {
+  padding-top: 4px;
+}
+
+.btn-navy a {
+  border: 1px solid #999999;
+}
+
 ul.icon-play li {
   margin-top: 10px;
 }
@@ -7190,7 +7198,7 @@ ul.icon-play li i {
 
 .search-sns form i.fa-search {
   position: absolute;
-  top: 4px;
+  top: 7px;
   right: 10px;
   font-size: 1.5em;
   color: #777777;
@@ -7289,14 +7297,6 @@ ul.icon-play li i {
 
 .home-video .section-download .btn-download {
   margin-top: 20px;
-}
-
-.home-video .section-download .btn-download .icon-btn-download {
-  padding-top: 4px;
-}
-
-.home-video .section-download .btn-download a {
-  border: 1px solid #999999;
 }
 
 .home-video .section-download p {
@@ -7398,18 +7398,49 @@ ul.icon-play li i {
 .home-community section h1 {
   padding-bottom: 20px;
   font-size: 24px;
-  color: #7e545f;
-  background: url('../work/images/h1_bg_pink.png') bottom left repeat-x;
+  background: url('../work/images/h1_bg_gray.png') bottom left repeat-x;
 }
 
-.home-community section p {
+.home-community section.section-forum .ccm-page-list {
   margin-top: 30px;
 }
 
-.home-community section.section-info .ccm-page-list {
+.home-community section.section-community p {
   margin-top: 30px;
 }
 
-.home-community section.section-info .ccm-page-list h3 {
+.home-community section.section-community .btn-navy {
+  margin-top: 20px;
+}
+
+.home-community section.section-community .btn-navy a {
+  display: inline-block;
+  width: 80%;
+}
+
+.home-sns section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.home-footer {
+  color: #fff;
+}
+
+.home-footer a {
+  color: #fff;
+}
+
+.home-footer nav ul.icon-play {
+  padding-top: 30px;
+  font-size: 12px;
+}
+
+.home-footer nav ul.icon-play li i {
+  padding-top: 0;
+}
+
+.home-footer footer {
+  margin: 40px 0;
   font-size: 12px;
 }

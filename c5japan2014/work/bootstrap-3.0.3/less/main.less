@@ -36,6 +36,12 @@
 // -------------------------
 .icon-btn-more {padding-top: 2px;}
 .btn-more{margin-top: 20px;}
+.btn-navy{
+	.icon-btn-navy{padding-top: 4px;}
+	a {
+		border: 1px solid @gray-light;
+	}
+}
 
 // list
 // -------------------------
@@ -81,7 +87,7 @@ ul.icon-play{
 		i.fa-search {
 			position: absolute;
 			right:10px;
-			top:4px;
+			top:7px;
 			color:@font-gray;
 			font-size: 1.5em;
 		}
@@ -156,11 +162,6 @@ ul.icon-play{
 		}
 		.btn-download{
 			margin-top: 20px;
-			.icon-btn-download{padding-top: 4px;}
-			a {
-				border: 1px solid @gray-light;
-			}
-
 		}
 		p{
 			margin-top: 20px;
@@ -263,25 +264,58 @@ ul.icon-play{
 		margin-bottom: 40px;
 		h1{
 			font-size: @font-size-h3;
-			color:@font-h1-gray;
 			padding-bottom: 20px;
 			background: url(@h1-bg-gray) bottom left repeat-x;
 		}
-		p{
-			margin-top: 30px;
-		}
 		&.section-forum{
-			.ccm-page-list {
+			.ccm-page-list{
 				margin-top: 30px;
-				h3{
-					font-size:@font-size-small;
-				}
 			}
 		}
 		&.section-community{
-
+			p{
+				margin-top: 30px;
+			}
+			.btn-navy{
+				margin-top: 20px;
+				a{
+					display: inline-block;
+					width: 80%;
+				}
+			}
 		}
 	}
 }
 
+// home-sns
+// -------------------------
+.home-sns{
+	section{
+		margin-top:40px;
+		margin-bottom: 40px;
+	}
+}
+
+
+// home-footer
+// -------------------------
+.home-footer{
+	color: #fff;
+	a{color: #fff;}
+	nav{
+		ul.icon-play{
+			padding-top:30px;
+			font-size:@font-size-small;
+			li{
+				i{
+					padding-top: 0;
+				}
+			}
+		}
+	}
+	footer{
+		margin: 40px 0;
+		font-size:@font-size-small;
+	}
+}
 
