@@ -18,7 +18,7 @@
 @font-header-nav-hover:#fb6f83;
 // size
 // -------------------------
-@header-searchbox-height: 32px;
+@header-searchbox-height: 36px;
 
 
 // home-bgcolor
@@ -32,32 +32,42 @@
 
 // header
 // -------------------------
-.search { 
+.search-sns { 
 	margin-top: 20px;
 	height:71px;
-	position: relative;
-	.form-control{
-		height: @header-searchbox-height;
-	}
-	i.fa-search {
-		position: absolute;
-		right:8px;
-		top:5px;
-		color:@font-gray;
-		font-size: 1.5em;
-	}
-}
-
-.sns-link {
-	margin-top: 18px;
 	text-align:right;
-	ul.fa-ul{
+	position: relative;
+	form{
+		position: absolute;
+		right:125px;
+		top:1px;
 		margin: 0px;
+		width: 200px;
+		display:inline;
+		.form-control{
+			margin: 0px;
+			width: 200px;
+			display:inline;
+			height: @header-searchbox-height;
+			line-height: @header-searchbox-height;
+		}
+		i.fa-search {
+			position: absolute;
+			right:10px;
+			top:5px;
+			color:@font-gray;
+			font-size: 1.5em;
+		}
+	}
+	ul.fa-ul{
+		display:inline;
+		margin:0;
+		padding-top:5px;
 		li{
 			display:inline;
 			padding-left:5px;
-			font-size:@header-searchbox-height+4;
-			line-height: @header-searchbox-height+4;
+			font-size:@header-searchbox-height;
+			line-height: @header-searchbox-height;
 			a{color: @font-snslink;}
 			a:hover {color: @font-snslink-hover;}
 		}

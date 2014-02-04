@@ -7145,45 +7145,56 @@ td.visible-print {
   background-color: #403e43;
 }
 
-.search {
+.search-sns {
   position: relative;
   height: 71px;
   margin-top: 20px;
+  text-align: right;
 }
 
-.search .form-control {
-  height: 32px;
+.search-sns form {
+  position: absolute;
+  top: 1px;
+  right: 125px;
+  display: inline;
+  width: 200px;
+  margin: 0;
 }
 
-.search i.fa-search {
+.search-sns form .form-control {
+  display: inline;
+  width: 200px;
+  height: 36px;
+  margin: 0;
+  line-height: 36px;
+}
+
+.search-sns form i.fa-search {
   position: absolute;
   top: 5px;
-  right: 8px;
+  right: 10px;
   font-size: 1.5em;
   color: #777777;
 }
 
-.sns-link {
-  margin-top: 18px;
-  text-align: right;
-}
-
-.sns-link ul.fa-ul {
+.search-sns ul.fa-ul {
+  display: inline;
+  padding-top: 5px;
   margin: 0;
 }
 
-.sns-link ul.fa-ul li {
+.search-sns ul.fa-ul li {
   display: inline;
   padding-left: 5px;
   font-size: 36px;
   line-height: 36px;
 }
 
-.sns-link ul.fa-ul li a {
+.search-sns ul.fa-ul li a {
   color: #777777;
 }
 
-.sns-link ul.fa-ul li a:hover {
+.search-sns ul.fa-ul li a:hover {
   color: #00aced;
 }
 
