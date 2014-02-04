@@ -19,6 +19,7 @@
 @font-snslink-hover:   #00aced;
 @font-header-nav:      #20bde8;
 @font-header-nav-hover:#fb6f83;
+@font-h1-pink:         #7e545f;
 
 // size
 // -------------------------
@@ -28,12 +29,13 @@
 // -------------------------
 
 @img-path:	       '../work/images/';
-@h1_bg_gray:       '@{img-path}h1_bg_gray.png';
+@h1-bg-gray:       '@{img-path}h1_bg_gray.png';
 @h1-bg-pink:       '@{img-path}h1_bg_pink.png';
 
 // button
 // -------------------------
 .icon-btn-more {padding-top: 2px;}
+.btn-more{margin-top: 20px;}
 
 // list
 // -------------------------
@@ -178,7 +180,6 @@ ul.icon-play{
 		text-align: center;
 	}
 }
-
 	
 .section-book{
 	margin-top:40px;
@@ -186,7 +187,7 @@ ul.icon-play{
 	h1{
 		font-size: @font-size-h3;
 		padding-bottom: 20px;
-		background: url(@h1_bg_gray) bottom left repeat-x;
+		background: url(@h1-bg-gray) bottom left repeat-x;
 	}
 	p{
 		margin-top: 20px;
@@ -223,5 +224,64 @@ ul.icon-play{
 	}
 }
 
+
+// home-info
+// -------------------------
+.home-info{
+	section{
+		margin-top:40px;
+		margin-bottom: 40px;
+		h1{
+			font-size: @font-size-h3;
+			color:@font-h1-pink;
+			padding-bottom: 20px;
+			background: url(@h1-bg-pink) bottom left repeat-x;
+		}
+		p{
+			margin-top: 30px;
+		}
+		&.section-info{
+			.ccm-page-list {
+				margin-top: 30px;
+				h3{
+					font-size:@font-size-small;
+				}
+			}
+		}
+		&.section-example{
+		}
+		&.section-weeklycon{
+		}
+	}
+}
+
+// home-community
+// -------------------------
+.home-community{
+	section{
+		margin-top:40px;
+		margin-bottom: 40px;
+		h1{
+			font-size: @font-size-h3;
+			color:@font-h1-gray;
+			padding-bottom: 20px;
+			background: url(@h1-bg-gray) bottom left repeat-x;
+		}
+		p{
+			margin-top: 30px;
+		}
+		&.section-forum{
+			.ccm-page-list {
+				margin-top: 30px;
+				h3{
+					font-size:@font-size-small;
+				}
+			}
+		}
+		&.section-community{
+
+		}
+	}
+}
 
 

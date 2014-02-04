@@ -7129,6 +7129,10 @@ td.visible-print {
   padding-top: 2px;
 }
 
+.btn-more {
+  margin-top: 20px;
+}
+
 ul.icon-play li {
   margin-top: 10px;
 }
@@ -7360,4 +7364,52 @@ ul.icon-play li i {
 
 .home-user section .nav-home-user {
   margin: 30px 40px;
+}
+
+.home-info section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.home-info section h1 {
+  padding-bottom: 20px;
+  font-size: 24px;
+  color: #7e545f;
+  background: url('../work/images/h1_bg_pink.png') bottom left repeat-x;
+}
+
+.home-info section p {
+  margin-top: 30px;
+}
+
+.home-info section.section-info .ccm-page-list {
+  margin-top: 30px;
+}
+
+.home-info section.section-info .ccm-page-list h3 {
+  font-size: 12px;
+}
+
+.home-community section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.home-community section h1 {
+  padding-bottom: 20px;
+  font-size: 24px;
+  color: #7e545f;
+  background: url('../work/images/h1_bg_pink.png') bottom left repeat-x;
+}
+
+.home-community section p {
+  margin-top: 30px;
+}
+
+.home-community section.section-info .ccm-page-list {
+  margin-top: 30px;
+}
+
+.home-community section.section-info .ccm-page-list h3 {
+  font-size: 12px;
 }
