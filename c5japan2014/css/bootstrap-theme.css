@@ -81,24 +81,24 @@
 }
 
 .btn-success {
-  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
-  background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
+  background-image: -webkit-linear-gradient(top, #363a58 0%, #1f2132 100%);
+  background-image: linear-gradient(to bottom, #363a58 0%, #1f2132 100%);
   background-repeat: repeat-x;
-  border-color: #3e8f3e;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
+  border-color: #1b1d2c;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff363a58', endColorstr='#ff1f2132', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
 .btn-success:hover,
 .btn-success:focus {
-  background-color: #419641;
+  background-color: #1f2132;
   background-position: 0 -15px;
 }
 
 .btn-success:active,
 .btn-success.active {
-  background-color: #419641;
-  border-color: #3e8f3e;
+  background-color: #1f2132;
+  border-color: #1b1d2c;
 }
 
 .btn-warning {
@@ -295,10 +295,10 @@
 }
 
 .progress-bar-success {
-  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #449d44 100%);
-  background-image: linear-gradient(to bottom, #5cb85c 0%, #449d44 100%);
+  background-image: -webkit-linear-gradient(top, #363a58 0%, #232538 100%);
+  background-image: linear-gradient(to bottom, #363a58 0%, #232538 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff449d44', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff363a58', endColorstr='#ff232538', GradientType=0);
 }
 
 .progress-bar-info {
