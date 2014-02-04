@@ -7129,6 +7129,14 @@ td.visible-print {
   padding-top: 2px;
 }
 
+ul.icon-play li {
+  margin-top: 10px;
+}
+
+ul.icon-play li i {
+  padding-top: 2px;
+}
+
 .home-video {
   background-color: #20bde8;
 }
@@ -7178,7 +7186,7 @@ td.visible-print {
 
 .search-sns form i.fa-search {
   position: absolute;
-  top: 5px;
+  top: 4px;
   right: 10px;
   font-size: 1.5em;
   color: #777777;
@@ -7313,10 +7321,43 @@ td.visible-print {
 
 .section-book h1 {
   padding-bottom: 20px;
-  font-size: 18px;
+  font-size: 24px;
   background: url('../work/images/h1_bg_gray.png') bottom left repeat-x;
 }
 
 .section-book p {
   margin-top: 20px;
+}
+
+.home-user section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.home-user section.section-site-editor h1 img {
+  background-color: #fda142;
+}
+
+.home-user section.section-site-editor ul.icon-play i {
+  color: #fda142;
+}
+
+.home-user section.section-designer h1 img {
+  background-color: #7bbc8f;
+}
+
+.home-user section.section-designer ul.icon-play i {
+  color: #7bbc8f;
+}
+
+.home-user section.section-developer h1 img {
+  background-color: #f05951;
+}
+
+.home-user section.section-developer ul.icon-play i {
+  color: #f05951;
+}
+
+.home-user section .nav-home-user {
+  margin: 30px 40px;
 }

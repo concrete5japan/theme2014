@@ -8,6 +8,9 @@
 @bg-home-community:	#cde2e2;
 @bg-home-sns:		#d3d1d7;
 @bg-home-footer:	#403e43;
+@bg-site-editor:    #fda142;
+@bg-designer:       #7bbc8f;
+@bg-developer:      #f05951;
 
 // font-colors
 // -------------------------
@@ -28,10 +31,20 @@
 @h1_bg_gray:       '@{img-path}h1_bg_gray.png';
 @h1-bg-pink:       '@{img-path}h1_bg_pink.png';
 
-
 // button
 // -------------------------
 .icon-btn-more {padding-top: 2px;}
+
+// list
+// -------------------------
+ul.icon-play{
+	li{
+		margin-top: 10px;
+		i{
+			padding-top: 2px;
+		}
+	}
+}
 
 
 // home-bgcolor
@@ -66,7 +79,7 @@
 		i.fa-search {
 			position: absolute;
 			right:10px;
-			top:5px;
+			top:4px;
 			color:@font-gray;
 			font-size: 1.5em;
 		}
@@ -171,7 +184,7 @@
 	margin-top:40px;
 	margin-bottom: 40px;
 	h1{
-		font-size: @font-size-h4;
+		font-size: @font-size-h3;
 		padding-bottom: 20px;
 		background: url(@h1_bg_gray) bottom left repeat-x;
 	}
@@ -180,6 +193,35 @@
 	}
 }
 
+// home-user
+// -------------------------
+.home-user{
+	section{
+		margin-top:40px;
+		margin-bottom: 40px;
+		&.section-site-editor{
+			h1 img{background-color: @bg-site-editor;}
+			ul.icon-play{
+				i{color:@bg-site-editor;}
+			}
+		}
+		&.section-designer{
+			h1 img{background-color: @bg-designer;}
+			ul.icon-play{
+				i{color:@bg-designer;}
+			}
+		}
+		&.section-developer{
+			h1 img{background-color: @bg-developer;}
+			ul.icon-play{
+				i{color: @bg-developer;}
+			}
+		}
+		.nav-home-user{
+			margin: 30px 40px;
+		}
+	}
+}
 
 
 
