@@ -5958,3 +5958,27 @@ td.visible-print {
 #footer {
   background: #333;
 }
+.home-header {
+  background-color: #ffffff;
+}
+.home-video {
+  background-color: #20bde8;
+}
+.home-book {
+  background-color: #ffffff;
+}
+.home-user {
+  background-color: #f7f7f7;
+}
+.home-info {
+  background-color: #fbe2e0;
+}
+.home-community {
+  background-color: #cde2e2;
+}
+.home-sns {
+  background-color: #d3d1d7;
+}
+.home-footer {
+  background-color: #403e43;
+}
