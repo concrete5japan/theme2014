@@ -41,6 +41,8 @@ validation-report.json
 node_modules
 bower_components
 
-
 # add_for_concrete5
 Gemfile
+/js/min/
+/work/docs-assets/js/min/
+/work/docs-assets/jsraw-files.js
