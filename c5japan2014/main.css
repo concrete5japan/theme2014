@@ -294,6 +294,12 @@ ul.icon-play li i {
   width: 80%;
 }
 
+@media (max-width: 480px) {
+  .home-community section.section-community .btn-navy a {
+    width: 100%;
+  }
+}
+
 .home-sns section {
   margin-top: 40px;
   margin-bottom: 40px;

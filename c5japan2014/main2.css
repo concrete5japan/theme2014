@@ -1,3 +1,4 @@
+
 .icon-btn-more {
   padding-top: 2px;
 }
@@ -348,6 +349,12 @@ ul.icon-play li i {
 
 .home-community section.section-community .btn-navy a.btn-default:hover {
   background-color: #767665;
+}
+
+@media (max-width: 480px) {
+  .home-community section.section-community .btn-navy a {
+    width: 100%;
+  }
 }
 
 .home-sns section {
