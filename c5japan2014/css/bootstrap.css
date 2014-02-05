@@ -7124,3 +7124,382 @@ td.visible-print {
 #footer {
   background: #333;
 }
+
+.icon-btn-more {
+  padding-top: 2px;
+}
+
+.btn-more {
+  margin-top: 20px;
+}
+
+.btn-navy .icon-btn-navy {
+  padding-top: 4px;
+}
+
+.btn-navy a {
+  border: 1px solid #999999;
+}
+
+ul.icon-play li {
+  margin-top: 10px;
+}
+
+ul.icon-play li i {
+  padding-top: 2px;
+}
+
+.home-video {
+  background-color: #20bde8;
+}
+
+.home-book {
+  background-color: #def5fc;
+}
+
+.home-user {
+  background-color: #ffffff;
+}
+
+.home-info {
+  background-color: #ceef97;
+}
+
+.home-community {
+  background-color: #fff8c2;
+}
+
+.home-sns {
+  background-color: #f1f1f1;
+}
+
+.home-footer {
+  background-color: #403e43;
+}
+
+.search-sns {
+  position: relative;
+  margin-top: 25px;
+  text-align: right;
+}
+
+.search-sns form {
+  position: absolute;
+  top: 1px;
+  right: 125px;
+  display: inline;
+  width: 200px;
+  margin: 0;
+}
+
+.search-sns form .form-control {
+  display: inline;
+  width: 200px;
+  height: 36px;
+  margin: 0;
+  line-height: 36px;
+  border: 1px solid #20bde8;
+}
+
+.search-sns form i.fa-search {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  font-size: 1.5em;
+  color: #777777;
+}
+
+.search-sns ul.sns-link {
+  display: inline;
+  padding-top: 5px;
+  margin: 0;
+}
+
+.search-sns ul.sns-link li {
+  display: inline;
+  padding-left: 5px;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.search-sns ul.sns-link li a {
+  color: #13303a;
+}
+
+.search-sns ul.sns-link li a:hover {
+  color: #20bde8;
+}
+
+.header-nav {
+  margin-top: 25px;
+}
+
+.header-nav ul.nav-header {
+  margin-left: 0;
+}
+
+.header-nav ul.nav-header li {
+  display: inline;
+  padding-right: 25px;
+}
+
+.header-nav ul.nav-header li a {
+  color: #20bde8;
+  text-decoration: none;
+}
+
+.header-nav ul.nav-header li a:hover {
+  color: #fb6f83;
+}
+
+.header-login {
+  margin-top: 25px;
+  text-align: right;
+}
+
+.header-login ul.aside-login li {
+  display: inline;
+}
+
+.header-login ul.aside-login li a {
+  color: #13303a;
+  text-decoration: none;
+}
+
+.header-login ul.aside-login li a:hover {
+  color: #20bde8;
+}
+
+.home-video .section-youtube .youtubeBlock {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1199px) {
+  .home-video .section-youtube .youtubeBlock {
+    width: 380px;
+    margin: 40px auto;
+  }
+}
+
+.home-video .section-download {
+  padding: 0 20px;
+  color: #fff;
+}
+
+.home-video .section-download h1 {
+  margin-top: 60px;
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.home-video .section-download h1 img {
+  max-width: 100%;
+}
+
+.home-video .section-download .btn-download {
+  margin-top: 20px;
+}
+
+.home-video .section-download .btn-download .btn {
+  display: inline-block;
+  width: 100%;
+}
+
+.home-video .section-download .btn-download .btn .icon-btn-navy {
+  padding-top: 4px;
+}
+
+.home-video .section-download p {
+  margin-top: 20px;
+}
+
+.home-book {
+  color: #004c66;
+}
+
+.home-book .section-book-link {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1199px) {
+  .home-book .section-book-link {
+    text-align: center;
+  }
+}
+
+.home-book .section-book {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.home-book .section-book h1 {
+  font-size: 30px;
+}
+
+.home-book .section-book p {
+  margin-top: 20px;
+}
+
+.home-user section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.home-user section .btn-primary {
+  padding: 5px 10px;
+  background-color: #b1b1a9;
+  border-color: #b1b1a9;
+}
+
+.home-user section .btn-primary:hover {
+  background-color: #808074;
+}
+
+.home-user section.section-site-editor h1 img {
+  background-color: #fdc054;
+}
+
+.home-user section.section-site-editor ul.icon-play i {
+  color: #fdc054;
+}
+
+.home-user section.section-designer h1 img {
+  background-color: #96caa6;
+}
+
+.home-user section.section-designer ul.icon-play i {
+  color: #96caa6;
+}
+
+.home-user section.section-developer h1 img {
+  background-color: #f37b75;
+}
+
+.home-user section.section-developer ul.icon-play i {
+  color: #f37b75;
+}
+
+.home-user section .nav-home-user {
+  margin: 30px 40px;
+}
+
+.home-info section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.home-info section .btn-primary {
+  padding: 5px 10px;
+  background-color: #98be27;
+  border-color: #98be27;
+}
+
+.home-info section .btn-primary:hover {
+  background-color: #546916;
+}
+
+.home-info section h1 {
+  font-size: 24px;
+  color: #4c6600;
+}
+
+.home-info section p {
+  margin-top: 30px;
+}
+
+.home-info section.section-info .ccm-page-list {
+  margin-top: 30px;
+}
+
+.home-info section.section-info .ccm-page-list h3 {
+  font-size: 12px;
+}
+
+.home-info section.section-info .ccm-page-list h3 a {
+  font-weight: normal;
+  color: #4c6600;
+}
+
+.home-community section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #8c7630;
+}
+
+.home-community section .btn-primary {
+  padding: 5px 10px;
+  background-color: #ae9e6d;
+  border-color: #ae9e6d;
+}
+
+.home-community section .btn-primary:hover {
+  background-color: #746841;
+}
+
+.home-community section h1 {
+  font-size: 24px;
+}
+
+.home-community section.section-forum .ccm-page-list {
+  margin-top: 30px;
+}
+
+.home-community section.section-forum .ccm-page-list a {
+  color: #8c7630;
+}
+
+.home-community section.section-community p {
+  margin-top: 30px;
+}
+
+.home-community section.section-community .btn-navy {
+  margin-top: 20px;
+}
+
+.home-community section.section-community .btn-navy a {
+  display: inline-block;
+  width: 80%;
+}
+
+.home-community section.section-community .btn-navy a.btn-default {
+  color: #fff;
+  background-color: #686859;
+  border-color: #686859;
+}
+
+.home-community section.section-community .btn-navy a.btn-default i {
+  color: #cecebf;
+}
+
+.home-community section.section-community .btn-navy a.btn-default:hover {
+  background-color: #767665;
+}
+
+.home-sns section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.home-footer {
+  color: #fff;
+}
+
+.home-footer a {
+  color: #fff;
+}
+
+.home-footer nav ul.icon-play {
+  padding-top: 30px;
+  font-size: 7px;
+}
+
+.home-footer nav ul.icon-play li i {
+  padding-top: 2px;
+}
+
+.home-footer footer {
+  margin: 40px 0;
+  font-size: 12px;
+}
