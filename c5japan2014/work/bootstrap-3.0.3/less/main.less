@@ -34,7 +34,12 @@
 
 // button
 // -------------------------
-.icon-btn-more {padding-top: 2px;}
+.icon-btn-more {
+	display:inline-block;
+	padding-top: 4px;
+	padding-right:2px;
+	font-size:ceil(@font-size-base * 0.5);
+}
 .btn-more{margin-top: 20px;}
 .btn-navy{
 	.icon-btn-navy{padding-top: 4px;}
@@ -282,6 +287,11 @@ ul.icon-play{
 					display: inline-block;
 					width: 80%;
 				}
+				@media (max-width: @screen-xs-min) {
+					a{
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
@@ -308,7 +318,8 @@ ul.icon-play{
 			font-size:@font-size-small;
 			li{
 				i{
-					padding-top: 0;
+					padding-top: 2px;
+					font-size:ceil(@font-size-base * 0.5);
 				}
 			}
 		}
