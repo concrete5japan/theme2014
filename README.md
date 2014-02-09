@@ -24,3 +24,10 @@ http://fortawesome.github.io/Font-Awesome/
 ## 画像ファイル
 c5japan2014/work/images内に保存
 concrete5 Japan 日本語公式サイト内のものは、http://concrete5-japan.org/ 内へリンク
+
+## 各ブランチのページイメージ画像
+pattern-a 
+https://drive.google.com/folderview?id=0BwGDvUWmuLeIRjdUeGJmM3NMQUU&usp=sharing&tid=0BzWUde-u-vKvZWJwbFFzbzI3OUE
+
+pattern-b 
+https://drive.google.com/folderview?id=0BzAUrUcHlwutc09RaVdwOGtQSzg&usp=sharing&tid=0BzWUde-u-vKvZWJwbFFzbzI3OUE
