@@ -16,17 +16,11 @@
 <div class="container">
 	<header>
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-6 col-xs-12">
 				<h1 class="site-logo"><a href="http://concrete5-japan.org/"><img src="http://concrete5-japan.org/themes/c5japan2011/images/c5japanlogo.png" alt="concrete5 日本語公式サイト トップへ"></a></h1>
 			</div>
-			<div class="col-sm-6">
-				<aside class="search-sns">
-					<form action="http://www.google.co.jp/cse" id="cse-search-box" target="_blank">
-						<input type="hidden" name="cx" value="partner-pub-9838343653530325:5ay760-i2hu">
-						<input type="hidden" name="ie" value="UTF-8">
-						<input type="text" class="form-control" placeholder="Search">
-						<i class="fa fa-search"></i> 
-					</form>
+			<div class="col-sm-6 hidden-xs">
+				<aside class="header-sns">
 					<ul class="fa-ul sns-link">
 						<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
@@ -48,7 +42,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <!-- <a class="navbar-brand" href="#">Brand</a> -->
+      <!-- <span class="navbar-menu">メニュー</span> -->
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -61,16 +55,27 @@
 			<li><a href="/community/" target="_self"><i class="fa fa-comments"></i> コミュニティ</a></li>
 			<li><a href="#" target="_self"><i class="fa fa-download"></i> ダウンロード</a></li>
 		</ul>
-<!--       <form class="navbar-form navbar-left" role="search">
+    <ul class="nav navbar-nav navbar-right fa-ul">
+			<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
+			<li><a href="/register/?rcID=1"><i class="fa fa-user"></i> 新規登録</a></li>
+    </ul>
+
+    <form action="http://www.google.co.jp/cse" id="cse-search-box" target="_blank" class="navbar-form" role="search">
+			<input type="hidden" name="cx" value="partner-pub-9838343653530325:5ay760-i2hu">
+			<input type="hidden" name="ie" value="UTF-8">
+			<div class="form-responsive">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+			</div>
+		</form>
+<!--      <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn">Submit</button>
       </form> -->
-      <ul class="nav navbar-nav navbar-right fa-ul">
-			<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
-			<li><a href="/register/?rcID=1"><i class="fa fa-user"></i> 新規登録</a></li>
-      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
