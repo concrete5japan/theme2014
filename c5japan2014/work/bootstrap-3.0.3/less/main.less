@@ -71,32 +71,16 @@ ul.icon-play{
 
 // header
 // -------------------------
-.search-sns { 
+
+@media (max-width: @grid-float-breakpoint-max) {
+	.site-logo{
+		text-align: center;
+	}
+}
+.header-sns { 
 	margin-top: 25px;
 	text-align:right;
 	position: relative;
-	form{
-		position: absolute;
-		right:125px;
-		top:1px;
-		margin: 0px;
-		width: 200px;
-		display:inline;
-		.form-control{
-			margin: 0px;
-			width: 200px;
-			display:inline;
-			height: @header-searchbox-height;
-			line-height: @header-searchbox-height;
-		}
-		i.fa-search {
-			position: absolute;
-			right:10px;
-			top:7px;
-			color:@font-gray;
-			font-size: 1.5em;
-		}
-	}
 	ul.sns-link{
 		display:inline;
 		margin:0;
@@ -256,7 +240,7 @@ ul.icon-play{
 					display: inline-block;
 					width: 80%;
 				}
-				@media (max-width: @screen-xs-min) {
+				@media (max-width: @screen-xs-max) {
 					a{
 						width: 100%;
 					}
@@ -301,135 +285,180 @@ ul.icon-play{
 
 // navbar-custom
 // -------------------------
- .navbar-collapse {
-	max-height: 400px;
-	padding-right: 0;
-	padding-left: 0;
- }
 .navbar-custom {
 	min-height: 10px;
 	margin-bottom: 0;
 	.navbar-nav {
-		margin-left: 0;
-	    li {
-			padding-right:20px;
-	    	a {
-	    		padding: 15px 10px 5px 0;
-				color: @font-header-nav;
-				text-decoration: none;
-		      	&:hover,
-		      	&:focus {
-			        color: @font-header-nav-hover;
-			        //background-color: @navbar-default-link-hover-bg;
-		    	}
-		    }
-		    &.active > a {
-				&,
+		&.fa-ul{
+			margin-left: 0;
+		}
+		> li > a {
+			padding: 15px 30px 10px 0;
+			color: @font-header-nav;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				color: @font-header-nav-hover;
+				background-color: transparent;
+			}
+			}
+		> .active > a {
+			&,
+			&:hover,
+			&:focus {
+			color: @font-header-nav-hover;
+			background-color: @navbar-default-link-active-bg;
+			}
+		}
+		&.navbar-right{
+			> li > a {
+				padding-right:0;
+				padding-left:15px;
+				color: @font-snslink;
 				&:hover,
 				&:focus {
-			        color: @font-header-nav-hover;
-			        //background-color: @navbar-default-link-active-bg;
-		    	}
-	      	}
-	   	}
-	   	&.navbar-right{
-		    li {
-		    	padding-right:0;
-		    	a {
-		    		color: @font-snslink;
-			      	&:hover,
-			      	&:focus {
-				        color: @font-snslink-hover;
-			    	}
-			    }
+					color: @font-snslink-hover;
+				}
 			}
-	   	}
-	   	@media (max-width: @screen-sm) {
-	   		li{
-	   			padding-right:0;
-			    a {
-		    			padding: 10px;
-		    	}
-		    }
-	    }
-	 }
-
-	.navbar-toggle {
-		border-color: @navbar-default-toggle-border-color;
-		background-color: @navbar-default-bg;
-		&:hover,
-		&:focus {
-			background-color: @navbar-default-toggle-hover-bg;
-		}
-		.icon-bar {
-			background-color: @navbar-default-toggle-icon-bar-bg;
 		}
 	}
 
-	.navbar-collapse,
+	@media (max-width: @grid-float-breakpoint-max) {
+		.navbar-nav {
+			margin:0;
+			> li > a {
+				padding: 15px;
+				&:hover,
+				&:focus {
+					color: @font-header-nav-hover;
+					background-color: @navbar-default-link-active-bg;
+				}
+				&.active > a {
+					&,
+					&:hover,
+					&:focus {
+						color: @font-header-nav-hover;
+						background-color: @navbar-default-link-active-bg;
+					}
+				}
+			}
+		}
+	}
+
+
+	.navbar-collapse {
+		padding-right: 0;
+		padding-left: 0;
+		position: relative;
+ 	}
+ 	@media (max-width: @grid-float-breakpoint-max) {
+		.navbar-collapse {
+			position: static;
+	 	}
+ 	}
 	.navbar-form {
-	border-color: @navbar-default-border;
+		position: absolute;
+		right:140px;
+		top:-67px;
+		margin: 0px;
+		width: 200px;
+		display:inline;
+		.form-control{
+			margin: 0px;
+			width: 200px;
+			display:inline;
+			height: @header-searchbox-height;
+			line-height: @header-searchbox-height;
+		}
+		.btn-search {
+			position: absolute;
+			right:0;
+			top:7px;
+			width: 21px;
+			height:21px;
+			padding: 0;
+			color:@font-gray;
+			font-size: 21px;
+			line-height: 21px;
+			border: none;
+			background-color: transparent;
+		}
 	}
 
-	// Dropdown menu items
-	.navbar-nav {
-		// Remove background color from open dropdown
-		> .open > a {
-		  &,
-		  &:hover,
-		  &:focus {
-		    background-color: @navbar-default-link-active-bg;
-		    color: @navbar-default-link-active-color;
-		  }
+	@media (max-width: @grid-float-breakpoint-max) {
+		.navbar-header{
+			background-color: @bg-home-user;
+			color: @font-snslink;
 		}
-
-		@media (max-width: @grid-float-breakpoint-max) {
-			// Dropdowns get custom display when collapsed
-			.open .dropdown-menu {
-				> li > a {
-				  color: @navbar-default-link-color;
-				  &:hover,
-				  &:focus {
-				    color: @navbar-default-link-hover-color;
-				    background-color: @navbar-default-link-hover-bg;
-				  }
-				}
-				> .active > a {
-				  &,
-				  &:hover,
-				  &:focus {
-				    color: @navbar-default-link-active-color;
-				    background-color: @navbar-default-link-active-bg;
-				  }
-				}
-				> .disabled > a {
-				  &,
-				  &:hover,
-				  &:focus {
-				    color: @navbar-default-link-disabled-color;
-				    background-color: @navbar-default-link-disabled-bg;
-				  }
-				}
+		.navbar-form {
+			position: static;
+			width: auto;
+			display: block;
+			.form-responsive{
+				position: relative;
+			}
+			.form-control{
+				width: 100%;
+			}
+			.btn-search {
+				right:15px;
+				bottom:50px;
 			}
 		}
 	}
+	.navbar-toggle {
+    border-color: @font-snslink;
+    background-color: @font-snslink;
+    &:hover,
+    &:focus {
+      background-color: @font-snslink-hover;
+      border-color: @font-snslink-hover;
+    }
+    .icon-bar {
+      background-color:#fff;
+    }
+  }
+	// .navbar-menu{
+	// 	display:none;
+	// }
+	// @media (max-width: @grid-float-breakpoint-max) {
+	// 	.navbar-menu{
+	// 		display:inline;
+	// 	}
+	// }
+	// Dropdown menu items
+  .navbar-nav {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-default-link-active-bg;
+        color: @navbar-default-link-active-color;
+      }
+    }
 
-
-	// Links in navbars
-	//
-	// Add a class to ensure links outside the navbar nav are colored correctly.
-
-	.navbar-link {
-		color: @navbar-default-link-color;
-		&:hover {
-		  color: @navbar-default-link-hover-color;
-		}
-	}
-	.navbar-header{
-		position:absolute;
-		width:70px;
-		height:50px;
-		top:-130px;
-		right:10px;
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a {
+          color: @navbar-default-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-default-link-hover-color;
+            background-color: @navbar-default-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-default-link-active-color;
+            background-color: @navbar-default-link-active-bg;
+          }
+        }
+      }
+    }
 	}
 }
