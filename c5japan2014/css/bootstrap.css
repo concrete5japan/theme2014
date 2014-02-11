@@ -7210,19 +7210,23 @@ ul.icon-play li i {
 }
 
 .home-video .section-youtube .youtubeBlock {
+  position: relative;
+  padding-top: 56.31%;
   margin-top: 40px;
   margin-bottom: 40px;
+  overflow: hidden;
+  witdh: 100%;
 }
 
-.home-video .section-youtube .youtubeBlock iframe {
+.home-video .section-youtube .youtubeBlock iframe,
+.home-video .section-youtube .youtubeBlock object,
+.home-video .section-youtube .youtubeBlock embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 10px solid #4ecbed;
-}
-
-@media (max-width: 1199px) {
-  .home-video .section-youtube .youtubeBlock {
-    width: 380px;
-    margin: 40px auto;
-  }
 }
 
 .home-video .section-download {
