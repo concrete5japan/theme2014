@@ -7176,112 +7176,57 @@ ul.icon-play li i {
   background-color: #403e43;
 }
 
-.search-sns {
+@media (max-width: 767px) {
+  .site-logo {
+    text-align: center;
+  }
+}
+
+.header-sns {
   position: relative;
   margin-top: 25px;
   text-align: right;
 }
 
-.search-sns form {
-  position: absolute;
-  top: 1px;
-  right: 125px;
-  display: inline;
-  width: 200px;
-  margin: 0;
-}
-
-.search-sns form .form-control {
-  display: inline;
-  width: 200px;
-  height: 36px;
-  margin: 0;
-  line-height: 36px;
-}
-
-.search-sns form i.fa-search {
-  position: absolute;
-  top: 7px;
-  right: 10px;
-  font-size: 1.5em;
-  color: #777777;
-}
-
-.search-sns ul.sns-link {
+.header-sns ul.sns-link {
   display: inline;
   padding-top: 5px;
   margin: 0;
 }
 
-.search-sns ul.sns-link li {
+.header-sns ul.sns-link li {
   display: inline;
   padding-left: 5px;
   font-size: 36px;
   line-height: 36px;
 }
 
-.search-sns ul.sns-link li a {
+.header-sns ul.sns-link li a {
   color: #777777;
 }
 
-.search-sns ul.sns-link li a:hover {
-  color: #00aced;
-}
-
-.header-nav {
-  margin-top: 25px;
-}
-
-.header-nav ul.nav-header {
-  margin-left: 0;
-}
-
-.header-nav ul.nav-header li {
-  display: inline;
-  padding-right: 25px;
-}
-
-.header-nav ul.nav-header li a {
-  color: #20bde8;
-  text-decoration: none;
-}
-
-.header-nav ul.nav-header li a:hover {
-  color: #fb6f83;
-}
-
-.header-login {
-  margin-top: 25px;
-  text-align: right;
-}
-
-.header-login ul.aside-login li {
-  display: inline;
-}
-
-.header-login ul.aside-login li a {
-  color: #777777;
-  text-decoration: none;
-}
-
-.header-login ul.aside-login li a:hover {
+.header-sns ul.sns-link li a:hover {
   color: #00aced;
 }
 
 .home-video .section-youtube .youtubeBlock {
+  position: relative;
+  padding-top: 56.31%;
   margin-top: 40px;
   margin-bottom: 40px;
+  overflow: hidden;
+  witdh: 100%;
 }
 
-.home-video .section-youtube .youtubeBlock iframe {
+.home-video .section-youtube .youtubeBlock iframe,
+.home-video .section-youtube .youtubeBlock object,
+.home-video .section-youtube .youtubeBlock embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 10px solid #4ecbed;
-}
-
-@media (max-width: 1199px) {
-  .home-video .section-youtube .youtubeBlock {
-    width: 380px;
-    margin: 40px auto;
-  }
 }
 
 .home-video .section-download {
@@ -7421,7 +7366,7 @@ ul.icon-play li i {
   width: 80%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .home-community section.section-community .btn-navy a {
     width: 100%;
   }
@@ -7453,4 +7398,167 @@ ul.icon-play li i {
 .home-footer footer {
   margin: 40px 0;
   font-size: 12px;
+}
+
+.navbar-custom {
+  min-height: 10px;
+  margin-bottom: 0;
+}
+
+.navbar-custom .navbar-nav.fa-ul {
+  margin-left: 0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+  padding: 15px 30px 10px 0;
+  color: #20bde8;
+  text-decoration: none;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+  color: #fb6f83;
+  background-color: transparent;
+}
+
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+  color: #fb6f83;
+  background-color: #e7e7e7;
+}
+
+.navbar-custom .navbar-nav.navbar-right > li > a {
+  padding-right: 0;
+  padding-left: 15px;
+  color: #777777;
+}
+
+.navbar-custom .navbar-nav.navbar-right > li > a:hover,
+.navbar-custom .navbar-nav.navbar-right > li > a:focus {
+  color: #00aced;
+}
+
+@media (max-width: 767px) {
+  .navbar-custom .navbar-nav {
+    margin: 0;
+  }
+  .navbar-custom .navbar-nav > li > a {
+    padding: 15px;
+  }
+  .navbar-custom .navbar-nav > li > a:hover,
+  .navbar-custom .navbar-nav > li > a:focus {
+    color: #fb6f83;
+    background-color: #e7e7e7;
+  }
+  .navbar-custom .navbar-nav > li > a.active > a,
+  .navbar-custom .navbar-nav > li > a.active > a:hover,
+  .navbar-custom .navbar-nav > li > a.active > a:focus {
+    color: #fb6f83;
+    background-color: #e7e7e7;
+  }
+}
+
+.navbar-custom .navbar-collapse {
+  position: relative;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media (max-width: 767px) {
+  .navbar-custom .navbar-collapse {
+    position: static;
+  }
+}
+
+.navbar-custom .navbar-form {
+  position: absolute;
+  top: -67px;
+  right: 140px;
+  display: inline;
+  width: 200px;
+  margin: 0;
+}
+
+.navbar-custom .navbar-form .form-control {
+  display: inline;
+  width: 200px;
+  height: 36px;
+  margin: 0;
+  line-height: 36px;
+}
+
+.navbar-custom .navbar-form .btn-search {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  font-size: 21px;
+  line-height: 21px;
+  color: #777777;
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .navbar-custom .navbar-header {
+    color: #777777;
+    background-color: #f7f7f7;
+  }
+  .navbar-custom .navbar-form {
+    position: static;
+    display: block;
+    width: auto;
+  }
+  .navbar-custom .navbar-form .form-responsive {
+    position: relative;
+  }
+  .navbar-custom .navbar-form .form-control {
+    width: 100%;
+  }
+  .navbar-custom .navbar-form .btn-search {
+    right: 15px;
+    bottom: 50px;
+  }
+}
+
+.navbar-custom .navbar-toggle {
+  background-color: #777777;
+  border-color: #777777;
+}
+
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #00aced;
+  border-color: #00aced;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:focus {
+  color: #555555;
+  background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+    color: #777777;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333333;
+    background-color: transparent;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555555;
+    background-color: #e7e7e7;
+  }
 }
