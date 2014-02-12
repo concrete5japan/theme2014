@@ -7739,3 +7739,31 @@ ul.icon-play li i {
   top: 0.2rem;
   left: -1.5rem;
 }
+
+p.text-red {
+  color: #fb6f83;
+}
+
+div.outline h2 {
+  padding: 10px;
+  margin: 0;
+  font-size: 100%;
+  font-weight: bold;
+  color: #4b5765;
+  background: #89c7e1;
+}
+
+div.outline div {
+  padding: 10px;
+  background: #b8dded;
+}
+
+div.outline ul li a {
+  font-size: 90%;
+  color: #4b5765;
+}
+
+div.outline ul li a i {
+  font-size: 90%;
+  text-decoration: none;
+}
