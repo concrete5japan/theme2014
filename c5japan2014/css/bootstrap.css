@@ -7767,3 +7767,7 @@ div.outline ul li a i {
   font-size: 90%;
   text-decoration: none;
 }
+
+.container .row {
+  margin-bottom: 20px;
+}
