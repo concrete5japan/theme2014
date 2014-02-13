@@ -8,9 +8,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>concrete5 Japan 日本語公式サイト</title>
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/font-awesome.min.css">
-    <script src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/css/font-awesome.min.css">
+    <script src="<?php echo $this->getThemePath(); ?>/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -48,14 +48,10 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    	<ul class="nav navbar-nav fa-ul">
-			<li><a href="/" target="_self"><i class="fa fa-home"></i> ホーム</a></li>
-			<li><a href="/about/" target="_self"><i class="fa fa-lightbulb-o"></i> concrete5とは</a></li>
-			<li><a href="/help/" target="_self"><i class="fa fa-bookmark"></i> 使い方</a></li>
-			<li><a href="/news/" target="_self"><i class="fa fa-flag"></i> お知らせ</a></li>
-			<li><a href="/community/" target="_self"><i class="fa fa-comments"></i> コミュニティ</a></li>
-			<li><a href="#" target="_self"><i class="fa fa-download"></i> ダウンロード</a></li>
-		</ul>
+		<?php
+			$a = new Area('Top Menu');
+			$a->display($c);
+		?>
     <ul class="nav navbar-nav navbar-right fa-ul">
 			<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
 			<li><a href="/register/?rcID=1"><i class="fa fa-user"></i> 新規登録</a></li>
@@ -86,17 +82,16 @@
 		<div class="row">
 			<div class="col-md-1 hidden-sm"></div>
 			<div class="col-md-5 col-sm-7">
-				<section class="section-youtube">
-					<div id="youtube10382" class="youtubeBlock"><iframe class="youtube-player" type="text/html" width="380" height="214" src="http://www.youtube.com/embed/vtbyPIbsXI8" frameborder="0"></iframe></div>
-				</section>
+				<?php
+					$a = new Area('Slideshow');
+					$a->display($c);
+				?>
 			</div>
 			<div class="col-md-6 col-sm-5">
-				<section class="section-download">
-					<h1>直感的で、ワクワクするサイト運営を!
-					<img src="images/video_h1_bg.png" alt=""></h1>
-					<div class="btn-download btn-navy"><a class="btn btn-success btn-lg" href="/about/download/"><i class="fa fa-download pull-left icon-btn-navy"></i> 最新版ダウンロード</a></div>
-					<p>バージョン5.6.2.1</p>
-				</section>
+				<?php
+					$a = new Area('Download');
+					$a->display($c);
+				?>
 			</div>
 		</div><!--row-->
 	</div><!--contain er-->
@@ -106,18 +101,10 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-1"></div>
-		<div class="col-md-3">
-			<section class="section-book-link">
-				<a href="http://www.amazon.co.jp/gp/product/4839943842/"><img border="0" class="ccm-image-block" alt="concrete5 公式活用ガイドブック" src="http://concrete5-japan.org/files/cache/0822da4101adaab97b3c1719ef288f9d_f1225.jpg" width="180" height="232"></a>
-			</section>
-		</div>
-		<div class="col-md-8">
-			<section class="section-book">
-				<h1>concrete5 公式活用ガイドブック</h1>
-				<p><strong>2014年2月14日発売！初の日本語公式書籍</strong><br>本書はconcrete5のコミュニティメンバーが執筆した、初の日本語公式書籍となります。</p>
-				<p>concrete5をこれから使い始める方や興味のある方だけでなく、すでにお使いのデザイナーや開発者の方にも役立つよう、章ごとにテーマを決めて、解説を行っています。<br>本書が制作のオプションを増やしたいウェブデザイナー、自社のウェブサイトをもっと効率的に、自由に管理したいウェブ担当者、そして自分のウェブサイトを自分で運営したい全ての方の一助となることを願っています。</p>
-				<p class="text-right"><a title="2/6（木）「concrete5公式活用ガイドブック」出版記念セミナー" href="/news/concrete5-book-seminar/" class="btn btn-primary btn-xs"><i class="fa fa-play pull-left icon-btn-more"></i> 記念イベントはこちら</a></p>
-			</section>
+			<?php
+				$a = new Area("Top Bannar");
+				$a->display($c);
+			?>
 		</div>
 	</div><!--row-->
 </div><!--container-->
@@ -127,43 +114,30 @@
 		<div class="row">
 			<div class="col-md-4">
 				<section class="section-site-editor">
-					<h1 class="text-center"><img src="images/site_editors.png" alt="サイトエディター" class="img-circle"></h1>
-					<nav class="nav-home-user">
-						<ul class="fa-ul icon-play">
-							<li><a href="#"><i class="fa-li fa fa-play"></i> concrete5 を知ろう！</a></li>
-							<li><a href="#"><i class="fa-li fa fa-play"></i> ダウンロード・インストールしよう</a></li>
-							<li><a href="#"><i class="fa-li fa fa-play"></i> 編集方法</a></li>
-						</ul>
-					</nav>
-					<p class="text-center"><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-play pull-left icon-btn-more"></i> and more...</a></p>
+					<h1 class="text-center"><img src="<?php echo $this->getThemePath(); ?>/images/site_editors.png" alt="サイトエディター" class="img-circle"></h1>
+					<?php
+						$a = new Area('SiteEditer');
+						$a->display($c);
+					?>
 				</section>
 			</div>
 
 			<div class="col-md-4">
 				<section class="section-designer">
-					<h1 class="text-center"><img src="images/designers.png" alt="デザイナー" class="img-circle"></h1>
-					<nav class="nav-home-user">
-						<ul class="fa-ul icon-play">
-							<li><a href="#"><i class="fa-li fa fa-play"></i> デザインの柔軟性</a></li>
-							<li><a href="#"><i class="fa-li fa fa-play"></i> テーマを作成</a></li>
-							<li><a href="#"><i class="fa-li fa fa-play"></i> ブロックとカスタムテンプレート</a></li>
-							<li><a href="#"><i class="fa-li fa fa-play"></i> マーケットプレイス</a></li>
-						</ul>
-					</nav>
-					<p class="text-center"><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-play pull-left icon-btn-more"></i> and more...</a></p>
+					<h1 class="text-center"><img src="<?php echo $this->getThemePath(); ?>/images/designers.png" alt="デザイナー" class="img-circle"></h1>
+					<?php
+						$a = new Area('Designer');
+						$a->display($c);
+					?>
 				</section>
 			</div>
 			<div class="col-md-4">
 				<section class="section-developer">
-					<h1 class="text-center"><img src="images/developers.png" alt="デベロッパー" class="img-circle"></h1>
-					<nav class="nav-home-user">
-						<ul class="fa-ul icon-play">
-							<li><a href="#"><i class="fa-li fa fa-play"></i> 拡張性高い構造</a></li>
-							<li><a href="#"><i class="fa-li fa fa-play"></i> 拡張の仕方</a></li>
-							<li><a href="#"><i class="fa-li fa fa-play"></i> マーケットプレイス</a></li>
-						</ul>
-					</nav>
-					<p class="text-center"><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-play pull-left icon-btn-more"></i> and more...</a></p>
+					<h1 class="text-center"><img src="<?php echo $this->getThemePath(); ?>/images/developers.png" alt="デベロッパー" class="img-circle"></h1>
+					<?php
+						$a = new Area('Developer');
+						$a->display($c);
+					?>
 				</section>
 			</div>
 		</div><!--row-->
@@ -176,21 +150,18 @@
 			<div class="col-md-4">
 				<section class="section-info">
 					<h1>お知らせ</h1>
-					<div class="ccm-page-list">
-						<h3 class="ccm-page-list-title"><a href="/news/kansai-group-24/">2/16 (日) 関西ユーザーグループ 第24回勉強会</a></h3>		
-						<h3 class="ccm-page-list-title"><a href="/news/nagoya-group-31/">2/15(土) 名古屋ユーザーグループ勉強会</a></h3>	
-						<h3 class="ccm-page-list-title"><a href="/news/weekly-concrete5/">2/13 (木) 週刊 concrete5</a></h3>	
-						<h3 class="ccm-page-list-title"><a href="/news/concrete5-book-seminar/">2/6 （木） 19時 「concrete5公式活用ガイドブック」出版記念セミナー</a></h3>	
-						<h3 class="ccm-page-list-title"><a href="/news/weekly-concrete5-168/">2/6 (木) 15時 週刊 concrete5 Vol.168 特別生放送@下北沢OSS</a></h3>	
-					</div>
-					<p class="text-center"><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-play pull-left icon-btn-more"></i> and more...</a></p>
+					<?php
+						 $a = new Area('Main');
+					?>
 				</section>
 			</div>
 			<div class="col-md-4">
 				<section class="section-example">
 					<h1>導入事例</h1>
-					<p class="text-center"><img src="http://concrete5-japan.org/files/cache/b991bee3b850fc940ee7cffb3ca7d34c_f860.png" width="234" height="156" title="" alt=""></p>
-					<p class="text-center"><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-play pull-left icon-btn-more"></i> and more...</a></p>
+					<?php
+						$a = new Area('Showcase');
+						$a->display($c);
+					?>
 				</section>
 			</div>
 			<div class="col-md-4">
@@ -213,15 +184,10 @@
 			<div class="col-md-6">
 				<section class="section-forum">
 					<h1>フォーラム</h1>
-					<div class="ccm-page-list">
-						<p class="ccm-page-list-title">02/04 - <a href="/community/forums/chat/post-383/post-7108/post-7137/post-7151/post-7152/">Re: はじめにお読み下さい</a></p>	
-						<p class="ccm-page-list-title">02/04 - <a href="/community/forums/chat/post-383/post-7108/post-7137/post-7151/">管理画面→レポート→ログ→・・・の画面で</a></p>	
-						<p class="ccm-page-list-title">02/02 - <a href="/community/forums/beginner/post-7145/post-7148/post-7149/post-7150/">Re: Re: Re: テーマフォルダの正しい置き場所を教えてください。</a></p>	
-						<p class="ccm-page-list-title">02/02 - <a href="/community/forums/beginner/post-7145/post-7148/post-7149/">Re: Re: テーマフォルダの正しい置き場所を教えてください。</a></p>	
-						<p class="ccm-page-list-title">02/02 - <a href="/community/forums/beginner/post-7145/post-7148/">Re: テーマフォルダの正しい置き場所を教えてください。</a></p>	
-						<p class="ccm-page-list-title">02/02 - <a href="/community/forums/beginner/post-7145/post-7146/">Re: テーマフォルダの正しい置き場所を教えてください。</a></p>
-					</div>
-					<p class="btn-more text-right"><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-play pull-left icon-btn-more"></i> and more...</a></p>
+					<?php
+						 $a = new Area('Main2');
+						 $a->display($c);
+					?>
 				</section>
 			</div>
 			<div class="col-md-6">
