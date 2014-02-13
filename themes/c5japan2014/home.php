@@ -1,6 +1,8 @@
+<?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 <!doctype html>
-<html lang="ja">
+<html lang="<?= LANGUAGE ?>">
 <head>
+	<?php Loader::element('header_required'); ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
@@ -8,7 +10,6 @@
 	<title>concrete5 Japan 日本語公式サイト</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/font-awesome.min.css">
-	<script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </head>
 
@@ -316,6 +317,6 @@
 		</footer>
 	</div><!--container-->
 </div><!--home-footer-->
-
+<?php Loader::element('footer_required'); ?>
 </body>
 </html>
