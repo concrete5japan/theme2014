@@ -99,14 +99,10 @@
 
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-1"></div>
-			<?php
-				$a = new Area("Top Bannar");
-				$a->display($c);
-			?>
-		</div>
-	</div><!--row-->
+	<?php
+		$a = new Area("Top Bannar");
+		$a->display($c);
+	?>
 </div><!--container-->
 
 <div class="home-user">
@@ -152,6 +148,7 @@
 					<h1>お知らせ</h1>
 					<?php
 						 $a = new Area('Main');
+						 $a->display($c);
 					?>
 				</section>
 			</div>
