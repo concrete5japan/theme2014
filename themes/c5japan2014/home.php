@@ -52,27 +52,27 @@
 			$a = new Area('Top Menu');
 			$a->display($c);
 		?>
-    <ul class="nav navbar-nav navbar-right fa-ul">
-			<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
-			<li><a href="/register/?rcID=1"><i class="fa fa-user"></i> 新規登録</a></li>
-    </ul>
+		<ul class="nav navbar-nav navbar-right fa-ul">
+				<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
+				<li><a href="/register/?rcID=1"><i class="fa fa-user"></i> 新規登録</a></li>
+		</ul>
 
-    <form action="http://www.google.co.jp/cse" id="cse-search-box" target="_blank" class="navbar-form" role="search">
-			<input type="hidden" name="cx" value="partner-pub-9838343653530325:5ay760-i2hu">
-			<input type="hidden" name="ie" value="UTF-8">
-			<div class="form-responsive">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
+		<form action="http://www.google.co.jp/cse" id="cse-search-box" target="_blank" class="navbar-form" role="search">
+				<input type="hidden" name="cx" value="partner-pub-9838343653530325:5ay760-i2hu">
+				<input type="hidden" name="ie" value="UTF-8">
+				<div class="form-responsive">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
 				</div>
-				<button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+			</form>
+	<!--      <form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+			  <input type="text" class="form-control" placeholder="Search">
 			</div>
-		</form>
-<!--      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn">Submit</button>
-      </form> -->
+			<button type="submit" class="btn">Submit</button>
+		  </form> -->
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -212,14 +212,18 @@
 		<div class="row">
 			<div class="col-md-6">
 				<section class="section-facebook">
-					<div id="HTMLBlock6738" class="HTMLBlock">
-					<div style="background-color:#fff;"><fb:like-box href="http://www.facebook.com/concrete5japan" width="220" show_faces="true" stream="false" header="true" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=130482106997708&amp;header=true&amp;href=http%3A%2F%2Fwww.facebook.com%2Fconcrete5japan&amp;locale=ja_JP&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=220"><span style="vertical-align: bottom; width: 220px; height: 271px;"><iframe name="f1ee088c1c" width="220px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/plugins/like_box.php?app_id=130482106997708&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D29%23cb%3Df1501ba2ec%26domain%3Dconcrete5-japan.org%26origin%3Dhttp%253A%252F%252Fconcrete5-japan.org%252Ff37ae70e14%26relation%3Dparent.parent&amp;header=true&amp;href=http%3A%2F%2Fwww.facebook.com%2Fconcrete5japan&amp;locale=ja_JP&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=220" style="border: none; visibility: visible; width: 220px; height: 271px;" class=""></iframe></span></fb:like-box></div></div>
+					<?php
+						$a = new Area('facebook');
+						$a->display($c);
+					?>
 				</section>
 			</div>
 			<div class="col-md-6">
 				<section class="section-twitter">
-					<div id="HTMLBlock9258" class="HTMLBlock">
-					<iframe id="twitter-widget-2" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" style="border: none; max-width: 100%; min-width: 180px;" title="Twitter Timeline" width="220" height="350"></iframe></div>
+					<?php
+						$a = new Area('twitter');
+						$a->display($c);
+					?>
 				</section>
 			</div>
 		</div><!--row-->
@@ -231,42 +235,26 @@
 		<div class="row">
 			<div class="col-md-4">
 				<nav class="footer-nav">
-					<ul class="fa-ul icon-play">
-						<li><a title="ホーム" href="/"><i class="fa-li fa fa-play"></i> ホーム</a></li>
-						<li><a title="concrete5とは" href="/about/"><i class="fa-li fa fa-play"></i> concrete5とは</a></li>
-						<li><a title="使い方" href="/help/"><i class="fa-li fa fa-play"></i> 使い方</a></li>
-						<li><a title="お知らせ" href="/news/"><i class="fa-li fa fa-play"></i> お知らせ</a></li>
-						<li><a title="コミュニティ" href="/community/"><i class="fa-li fa fa-play"></i> コミュニティ</a></li>
-						<li><a title="ダウンロード" href="/about/download/"><i class="fa-li fa fa-play"></i> ダウンロード</a></li>
-						<li><a title="お問い合わせ" href="/about/contact/"><i class="fa-li fa fa-play"></i> お問い合わせ</a></li>
-					</ul>
+					<?php
+						$a = new Area('footer1');
+						$a->display($c);
+					?>
 				</nav>
 			</div>
 			<div class="col-md-4">
 				<nav class="footer-nav">
-					<ul class="fa-ul icon-play">
-						<li><a href="http://facebook.com/concrete5japan" target="_blank"><i class="fa-li fa fa-play"></i> Facebook</a></li>
-						<li><a href="http://twitter.com/concrete5japan" target="_blank"><i class="fa-li fa fa-play"></i> Twitter</a></li>
-						<li><a href="https://plus.google.com/b/116552723583932615962/" target="_blank"><i class="fa-li fa fa-play"></i> Google+</a></li>
-						<li><a href="http://page.mixi.jp/view_page.pl?page_id=58513" target="_blank"><i class="fa-li fa fa-play"></i> Mixi</a></li>
-					</ul>
-					<ul class="fa-ul icon-play">
-						<li><a href="http://www.ustream.tv/channel/concrete5japan" target="_blank"><i class="fa-li fa fa-play"></i> Ustream</a></li>
-						<li><a href="http://youtube.com/concrete5japan" target="_blank"><i class="fa-li fa fa-play"></i> YouTube</a></li>
-					</ul>
+					<?php
+						$a = new Area('footer2');
+						$a->display($c);
+					?>
 				</nav>
 			</div>
 			<div class="col-md-4">
 				<nav class="footer-nav">
-					<ul class="fa-ul icon-play">
-						<li><a href="http://github.com/concrete5japan/concrete5/" target="_blank"><i class="fa-li fa fa-play"></i> GitHub</a></li>
-						<li><a href="https://www.transifex.com/projects/p/concrete5/language/ja_JP/" target="_blank"><i class="fa-li fa fa-play"></i> Transifex</a></li>
-					</ul>
-
-
-					<ul class="fa-ul icon-play">
-						<li><a href="http://concrete5.co.jp/" target="_blank"><i class="fa-li fa fa-play"></i> コンクリートファイブジャパン株式会社</a></li>
-					</ul>
+					<?php
+						$a = new Area('footer3');
+						$a->display($c);
+					?>
 				</nav>
 			</div>
 		</div><!--row-->
