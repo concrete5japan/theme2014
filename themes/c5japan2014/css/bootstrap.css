@@ -7744,7 +7744,7 @@ p.text-red {
   color: #fb6f83;
 }
 
-div.outline h2 {
+section.outline h2 {
   padding: 10px;
   margin: 0;
   font-size: 100%;
@@ -7753,21 +7753,21 @@ div.outline h2 {
   background: #89c7e1;
 }
 
-div.outline div {
+section.outline div {
   padding: 10px;
   background: #b8dded;
 }
 
-div.outline ul li a {
+section.outline ul li a {
   font-size: 90%;
   color: #4b5765;
 }
 
-div.outline ul li a i {
+section.outline ul li a i {
   font-size: 90%;
   text-decoration: none;
 }
 
-.container .row {
-  margin-bottom: 20px;
+.help .row {
+  margin-bottom: 30px;
 }
