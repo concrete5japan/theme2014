@@ -2393,10 +2393,6 @@ fieldset[disabled] .btn-primary.active {
   background-color: #fff;
 }
 
-.btn-primary:hover {
-  background-color: #4d4d4d;
-}
-
 .btn-warning {
   color: #ffffff;
   background-color: #f0ad4e;
@@ -7121,10 +7117,6 @@ td.visible-print {
   }
 }
 
-#footer {
-  background: #333;
-}
-
 .icon-btn-more {
   display: inline-block;
   padding-top: 4px;
@@ -7150,6 +7142,10 @@ ul.icon-play li {
 
 ul.icon-play li i {
   padding-top: 2px;
+}
+
+.btn-primary:hover {
+  background-color: #4d4d4d;
 }
 
 .breadcrumb-container {
@@ -7768,6 +7764,6 @@ div.outline ul li a i {
   text-decoration: none;
 }
 
-.container .row {
+.help .row {
   margin-bottom: 20px;
 }
