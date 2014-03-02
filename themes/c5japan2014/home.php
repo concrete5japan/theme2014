@@ -49,8 +49,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<?php
-			$a = new Area('Top Menu');
-			$a->display($c);
+			$a = new GlobalArea('Top Menu');
+			$a->display();
 		?>
 		<ul class="nav navbar-nav navbar-right fa-ul">
 				<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
@@ -236,24 +236,24 @@
 			<div class="col-md-4">
 				<nav class="footer-nav">
 					<?php
-						$a = new Area('footer1');
-						$a->display($c);
+						$a = new GlobalArea('footer1');
+						$a->display();
 					?>
 				</nav>
 			</div>
 			<div class="col-md-4">
 				<nav class="footer-nav">
 					<?php
-						$a = new Area('footer2');
-						$a->display($c);
+						$a = new GlobalArea('footer2');
+						$a->display();
 					?>
 				</nav>
 			</div>
 			<div class="col-md-4">
 				<nav class="footer-nav">
 					<?php
-						$a = new Area('footer3');
-						$a->display($c);
+						$a = new GlobalArea('footer3');
+						$a->display();
 					?>
 				</nav>
 			</div>
