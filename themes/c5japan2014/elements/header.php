@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/css/font-awesome.min.css">
     <script src="<?php echo $this->getThemePath(); ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo $this->getThemePath(); ?>/js/tile.min.js"></script>
 </head>
 
 <body>
