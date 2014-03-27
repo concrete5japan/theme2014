@@ -16,12 +16,6 @@ $this->inc('elements/header.php');
 	<div class="row">
 		<div id="main" class="col-md-8" role="main">
 			<article class="default-article">
-				<h1>
-					<?php
-						$a = new Area('h1');
-						$a->display($c);
-					?>
-				</h1>
 				<?php
 					$a = new Area('content');
 					$a->display($c);
@@ -40,34 +34,6 @@ $this->inc('elements/header.php');
 					$a = new Area('sidebar-nav');
 					$a->display($c);
 				?>
-				<ul class="nav sidenav fa-ul">
-					<li><a href="#"><i class="fa fa-chevron-right pull-right"></i>インストール・アップグレード</a>
-						<ul class="fa-ul">
-							<li><a href="#"><i class="fa fa-li fa-play"></i>インストール準備インストール準備インストール準備</a></li>
-							<li><a href="#"><i class="fa fa-li fa-play"></i>インストール準備インストール準備インストール準備</a></li>
-							<li><a href="#"><i class="fa fa-li fa-play"></i>インストール準備</a>
-								<ul class="fa-ul">
-									<li><a href="#"><i class="fa fa-li fa-angle-right"></i>インストール準備</a></li>
-									<li><a href="#"><i class="fa fa-li fa-angle-right"></i>インストール準備インストール準備インストール準備インストール準備インストール準備</a></li>
-									<li><a href="#"><i class="fa fa-li fa-angle-right"></i>インストール準備</a></li>
-									<li><a href="#"><i class="fa fa-li fa-angle-right"></i>インストール準備</a></li>
-								</ul>
-							</li>
-							<li><a href="#"><i class="fa fa-li fa-play"></i>インストール準備インストール準備インストール準備</a></li>
-							<li><a href="#"><i class="fa fa-li fa-play"></i>インストール準備インストール準備インストール準備</a></li>
-							<li><a href="#"><i class="fa fa-li fa-play"></i>インストール準備</a>
-								<ul class="fa-ul">
-									<li><a href="#"><i class="fa fa-li fa-angle-right"></i>インストール準備</a></li>
-									<li><a href="#"><i class="fa fa-li fa-angle-right"></i>インストール準備インストール準備インストール準備インストール準備インストール準備</a></li>
-									<li><a href="#"><i class="fa fa-li fa-angle-right"></i>インストール準備</a></li>
-									<li><a href="#"><i class="fa fa-li fa-angle-right"></i>インストール準備</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="#"><i class="fa fa-chevron-right pull-right"></i>インストール・アップグレード</a></li>
-					<li><a href="#"><i class="fa fa-chevron-right pull-right"></i>インストール・アップグレード</a></li>
-				</ul>
 			</nav>
 		</div>
 	</div><!--row-->
