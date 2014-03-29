@@ -3,15 +3,41 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php');
 ?>
 
-<div id="main-content-container" class="col-sm-12">
-	<div id="main-content-inner">
+<div class="breadcrumb-container">
+	<nav class="container">
 		<?php
-		$a = new Area('Main');
-		$a->display($c);
+		    $a = new GlobalArea('header');
+		    $a->display();
 		?>
-	</div>
+	</nav>
 </div>
 
-<!-- end full width content area -->
+<div class="container">
+	<div class="row">
+		<div id="main" class="col-md-8" role="main">
+			<article class="default-article">
+				<?php
+					$a = new Area('main');
+					$a->display($c);
+				?>
+			</article>
+		</div>
+		<div id="sidebar" class="col-md-4" role="complementary">
+			<aside class="sidebar-title">
+				<?php
+					$a = new Area('sidebar-title-link');
+					$a->display($c);
+				?>
+			</aside>
+			<nav class="nav-sidebar">
+				<?php
+					$a = new Area('sidebar');
+					$a->display($c);
+				?>
+			</nav>
+		</div>
+	</div><!--row-->
+</div><!--container-->
 
-<?php $this->inc('elements/footer.php'); ?>
+
+<?php $this->inc('elements/footer.php');?>
