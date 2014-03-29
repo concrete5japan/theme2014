@@ -6,7 +6,7 @@ $this->inc('elements/header.php');
 <div class="breadcrumb-container">
 	<nav class="container">
 		<?php
-		    $a = new GlobalArea('breadcrumb');
+		    $a = new GlobalArea('header');
 		    $a->display();
 		?>
 	</nav>
@@ -17,7 +17,7 @@ $this->inc('elements/header.php');
 		<div id="main" class="col-md-8" role="main">
 			<article class="default-article">
 				<?php
-					$a = new Area('content');
+					$a = new Area('main');
 					$a->display($c);
 				?>
 			</article>
@@ -31,7 +31,7 @@ $this->inc('elements/header.php');
 			</aside>
 			<nav class="nav-sidebar">
 				<?php
-					$a = new Area('sidebar-nav');
+					$a = new Area('sidebar');
 					$a->display($c);
 				?>
 			</nav>
