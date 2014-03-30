@@ -22,7 +22,7 @@ foreach ($navItems as $ni) {
 		//新しいsectionの場合
 		$navSectionCount++;
 		echo '<section class="outline col-md-4">';
-		echo '<h2><a href="' . $ni->url . '" target="' . $ni->target . '">' . $ni->name . '</a></h2>';
+		echo '<h2><a href="' . $ni->url . '" target="' . $ni->target . '">'. $ni->name . '</a></h2>';
 
 		//submenuがある場合
 		if ($ni->hasSubmenu) {
@@ -36,13 +36,13 @@ foreach ($navItems as $ni) {
 		echo '<li>';
 		echo '<a href="' . $ni->url . '" target="' . $ni->target . '"><i class="fa fa-li fa-play"></i>'. $ni->name . '</a>';
 
-		//さらにサブメニューがあるかどうか判定（css未確認）
+		//さらにサブメニューがあるかどうか判定（css未設定）
 		if ($ni->hasSubmenu) {
 			$navDepthCount++;
 			echo '<ul>';
 		}else{
 			echo '</li>';
-			if($ni->subDepth === 1)$navDepthCount--;
+			$navDepthCount = $navDepthCount-($ni->subDepth);
 			echo str_repeat('</ul></li>', $ni->subDepth);
 		}
 	}
