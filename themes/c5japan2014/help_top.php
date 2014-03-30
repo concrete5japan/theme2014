@@ -25,16 +25,13 @@
 					$a->display($c);
 				?>
 			</article>
-		</div>
-	</div>
 
-	<div class="row">
-		<?php
-			$a = new Area('help_auto_nav');
-			$a->display($c);
-		?>
-	</div>
-		
+			<?php
+				$a = new Area('help_auto_nav');
+				$a->display($c);
+			?>
+		</div>
+	</div><!--row-->
 </div><!--container-->
 
 <?php $this->inc('elements/footer.php');?>
