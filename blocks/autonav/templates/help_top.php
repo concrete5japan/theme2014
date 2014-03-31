@@ -28,7 +28,7 @@ foreach ($navItems as $ni) {
 		if ($ni->hasSubmenu) {
 			$navDepthCount++;
 			$navhasSubmenuOn++;
-			echo '<div class="tile"><ul class="fa-ul icon-play">';
+			echo '<div class="tile"><ul class="first-ul fa-ul icon-play">';
 		}
 	}else{
 
