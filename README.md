@@ -9,7 +9,7 @@ concrete5-japan.org用テーマ2014年版
 ## htmlファイルの保存先
 * c5japan2014/work/
 
-## css構成：以下を使用
+## css構成
 * c5japan2014/css/bootstrap.min.css
 * c5japan2014/css/font-awesome.min.css
 
