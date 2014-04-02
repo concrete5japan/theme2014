@@ -7144,6 +7144,10 @@ ul.icon-play li i {
   padding-top: 2px;
 }
 
+ul.first-ul > li:last-child {
+  padding-bottom: 20px;
+}
+
 .btn-primary:hover {
   background-color: #4d4d4d;
 }
@@ -7764,6 +7768,10 @@ section.outline ul li a i {
   text-decoration: none;
 }
 
-.help .row {
+.help .row .default-article {
+  margin-bottom: 30px;
+}
+
+.help .row .tile {
   margin-bottom: 30px;
 }
