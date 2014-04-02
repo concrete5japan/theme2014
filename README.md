@@ -3,31 +3,30 @@ theme2014
 
 concrete5-japan.org用テーマ2014年版
 
-## home.htmlファイルの保存先
-c5japan2014/work/home.html
+## themes制作について
+* 各ページタイトル：記事ブロック内でページ制作時にh1タグを配置する。
+
+## htmlファイルの保存先
+* c5japan2014/work/
 
 ## css構成
-c5japan2014/css/bootstrap.min.css
-less：c5japan2014/work/bootstrap-3.0.3/less/bootstrap.less
+* c5japan2014/css/bootstrap.min.css
+* c5japan2014/css/font-awesome.min.css
 
-### 追加css
-c5japan2014/work/bootstrap-3.0.3/less/main.less に追加
+### 追加cssの保存先
+* c5japan2014/work/bootstrap-3.0.3/less/main.less
+* c5japan2014/work/bootstrap-3.0.3/less/mainvariables.less
+（brand-primaryとbrand-successの色を変更とそれにともなうbutton:hoverの設定変更に使用）
 
-### bootstrapに元々あるlessの変更点
-bootstrap.lessからのコンパイルにmain.lessを追加
-brand-primaryとbrand-successの色を変更とそれにともなうbutton:hoverの設定変更
+### bootstrap.lessの変更点
+追加cssを追加
+* main.less
+* mainvariables.less
 
 ## 追加ライブラリ
-FontAwesome → iconに使用
-http://fortawesome.github.io/Font-Awesome/
+* FontAwesome （http://fortawesome.github.io/Font-Awesome/）
+* tile.js
 
 ## 画像ファイル
-c5japan2014/work/images内に保存
-concrete5 Japan 日本語公式サイト内のものは、http://concrete5-japan.org/ 内へリンク
-
-## 各ブランチのページイメージ画像
-pattern-a 
-https://drive.google.com/folderview?id=0BwGDvUWmuLeIRjdUeGJmM3NMQUU&usp=sharing&tid=0BzWUde-u-vKvZWJwbFFzbzI3OUE
-
-pattern-b 
-https://drive.google.com/folderview?id=0BzAUrUcHlwutc09RaVdwOGtQSzg&usp=sharing&tid=0BzWUde-u-vKvZWJwbFFzbzI3OUE
+* c5japan2014/images内に保存
+* concrete5 Japan 日本語公式サイト内のものは、http://concrete5-japan.org/ 内へリンク
