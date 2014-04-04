@@ -7687,9 +7687,6 @@ ul.first-ul > li:last-child {
 
 .nav-sidebar > ul > li {
   margin-top: 1px;
-}
-
-.nav-sidebar > ul > li:first-child {
   border: 1px solid #a6bbbc;
 }
 
