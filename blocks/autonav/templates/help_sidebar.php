@@ -28,44 +28,41 @@ $navItems = $controller->getNavItems();
  *	$navItem->cObj       : collection object of the page this nav item represents (use this if you need to access page properties and attributes that aren't already available in the $navItem object)
  */
 
-echo '<nav class="panel-group" id="side-menu' . $bID . '">'; //opens the top-level menu
+ echo '<ul class="nav sidenav fa-ul">'; //opens the top-level menu
  
 foreach ($navItems as $ni) {
 	if ($ni->hasSubmenu && $ni->level === 1){
 		$menuno = $ni->cID;
-		echo '<div class="panel panel-default">';
-		echo '<div class="panel-heading">';
-		echo '<h2 class="panel-title">';
-		echo '<a data-toggle="collapse" data-parent="#side-menu' . $bID . '" href="#collapse' . $menuno . '">';
+		echo '<li>';
+		echo '<a data-toggle="collapse" href="#collapse' . $menuno . '">';
 		echo '<i class="fa fa-chevron-right pull-right"></i>';
 		echo $ni->name;
 		echo '</a>';
-		echo '</h2>';
-		echo '</div>';
 		if($ni->inPath) {
-			echo '<div id="collapse' . $menuno . '" class="panel-collapse collapse in">';
+			echo '<ul id="collapse' . $menuno . '" class="fa-ul collapse in">';
 		} else {
-			echo '<div id="collapse' . $menuno . '" class="panel-collapse collapse">';
+			echo '<ul id="collapse' . $menuno . '" class="fa-ul collapse">';
 		}
-		echo '<div class="panel-body">';
-		echo '<ul class="nav sidenav fa-ul" style="list-style:none ">';
 	} elseif($ni->isLast && $ni->level >= 3){
 		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-angle-right"></i>' . $ni->name . '</a></li>';
-		echo '</ul>';
+		echo '</ul></li>';
 	} elseif($ni->hasSubmenu && $ni->level >= 2){
-		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-play"></i>' . $ni->name . '</a></li>';
+		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-play"></i>' . $ni->name . '</a>';
 		echo '<ul class="fa-ul">';
 	} elseif($ni->isLast && $ni->level === 2) {
 		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-play"></i>' . $ni->name . '</a></li>';
-		echo '</ul>';
-		echo '</div>';
-		echo '</div>';
-		echo '</div>';
+		echo '</ul></li>';
 	} elseif($ni->level >= 3) {
 		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-angle-right"></i>' . $ni->name . '</a></li>';
 	} elseif($ni->level === 2) {
 		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-play"></i>' . $ni->name . '</a></li>';
+	} else {
+		echo '<li><a href="' . $ni->url . '">';
+		echo '<i class="fa fa-chevron-right pull-right"></i>';
+		echo $ni->name;
+		echo '</a></li>';
 	}
+
 }
 
-echo '</nav>'; //closes the top-level menu
+echo '</ul>'; //closes the top-level menu
