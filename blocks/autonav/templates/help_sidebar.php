@@ -37,7 +37,7 @@ $parent = Page::getByID($cParentID);
 $parentLink = Loader::helper('navigation')->getLinkToCollection($parent);
 ?>
 <aside class="sidebar-title">
-	<a href="<?php echo $parentLink?>"><i class="fa fa-sort-desc"></i><?php echo $parent?></a>
+	<a href="<?php echo $parentLink?>"><i class="fa fa-sort-desc"></i><?php echo h($parent->getCollectionName());?></a>
 </aside>
 <?php
 $navItems = $controller->getNavItems();
