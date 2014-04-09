@@ -8,7 +8,7 @@
 				<?php if (empty($nav_item_class)) { ?>
 					<i class="fa fa-lightbulb-o"></i>
 				<?php } else { ?>
-					<i class="<?php echo h($link->cObj->getAttribute('nav_item_class')) ?>"></i>
+					<i class="fa fa-<?php echo h($nav_item_class) ?>"></i>
 				<?php } ?>
 				<?php echo h($link->text, ENT_QUOTES, APP_CHARSET); ?>
 			</a>
