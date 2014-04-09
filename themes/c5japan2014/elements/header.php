@@ -1,13 +1,10 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 <!doctype html>
-<html lang="<?= LANGUAGE ?>">
+<html lang="<?php echo LANGUAGE ?>">
 <head>
 	<?php Loader::element('header_required'); ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title>concrete5 Japan 日本語公式サイト</title>
 	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/css/font-awesome.min.css">
     <script src="<?php echo $this->getThemePath(); ?>/js/bootstrap.min.js"></script>
@@ -18,14 +15,17 @@
 	<header>
 		<div class="row">
 			<div class="col-sm-6 col-xs-12">
-				<h1 class="site-logo"><a href="http://concrete5-japan.org/"><img src="http://concrete5-japan.org/themes/c5japan2011/images/c5japanlogo.png" alt="concrete5 日本語公式サイト トップへ"></a></h1>
+			<?php
+				$a = new GlobalArea('Site Name');
+				$a->display();
+			?>
 			</div>
 			<div class="col-sm-6 hidden-xs">
 				<aside class="header-sns">
 					<ul class="fa-ul sns-link">
-						<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-						<li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
+						<li><a href="https://www.facebook.com/concrete5japan" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+						<li><a href="https://twitter.com/concrete5japan" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+						<li><a href="https://www.youtube.com/user/concrete5japan" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
 					</ul>
 				</aside>
 			</div>
@@ -52,10 +52,26 @@
 			$a = new GlobalArea('Top Menu');
 			$a->display();
 		?>
+		<?php 
+		$u = new User();
+		if ($u->isRegistered()) { ?>
+			<?php  
+			if (Config::get("ENABLE_USER_PROFILES")) {
+				$userName = '<a href="' . $this->url('/profile') . '"><i class="fa fa-user"></i>' . $u->getUserName() . '</a>';
+			} else {
+				$userName = '<i class="fa fa-user"></i>'.$u->getUserName();
+			}
+			?>
 		<ul class="nav navbar-nav navbar-right fa-ul">
-				<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
-				<li><a href="/register/?rcID=1"><i class="fa fa-user"></i> 新規登録</a></li>
+				<li><?php echo t('Currently logged in as <b>%s</b>.', $userName)?></li>
+				<li><a href="<?php echo $this->url('/login', 'logout')?>"><i class="fa fa-sign-out"></i> <?php echo t('Sign Out')?></a></li>
 		</ul>
+		<?php  } else { ?>
+		<ul class="nav navbar-nav navbar-right fa-ul">
+				<li><a href="<?php echo $this->url('/login')?>"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
+				<li><a href="<?php echo $this->url('/register')?>"><i class="fa fa-user"></i> 新規登録</a></li>
+		</ul>
+		<?php  } ?>
 
 		<form action="http://www.google.co.jp/cse" id="cse-search-box" target="_blank" class="navbar-form" role="search">
 				<input type="hidden" name="cx" value="partner-pub-9838343653530325:5ay760-i2hu">
