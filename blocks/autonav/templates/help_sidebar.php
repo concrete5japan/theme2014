@@ -1,5 +1,45 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");
- 
+
+// Get parent ID
+$cParentID = 0;
+switch($controller->displayPages) {
+	case 'current':
+		$cParentID = $controller->cParentID;
+		if ($cParentID < 1) {
+			$cParentID = 1;
+		}
+		break;
+	case 'top':
+		// top level actually has ID 1 as its parent, since the home page is effectively alone at the top
+		$cParentID = 1;
+		break;
+	case 'above':
+		$cParentID = $controller->getParentParentID();
+		break;
+	case 'below':
+		$cParentID = $controller->cID;
+		break;
+	case 'second_level':
+		$cParentID = $controller->getParentAtLevel(2);
+		break;
+	case 'third_level':
+		$cParentID = $controller->getParentAtLevel(3);
+		break;
+	case 'custom':
+		$cParentID = $controller->displayPagesCID;
+		break;
+	default:
+		$cParentID = 1;
+		break;
+}
+
+$parent = Page::getByID($cParentID);
+$parentLink = Loader::helper('navigation')->getLinkToCollection($parent);
+?>
+<aside class="sidebar-title">
+	<a href="<?php echo $parentLink?>"><i class="fa fa-sort-desc"></i><?php echo $parent?></a>
+</aside>
+<?php
 $navItems = $controller->getNavItems();
  
 /**
@@ -28,7 +68,8 @@ $navItems = $controller->getNavItems();
  *	$navItem->cObj       : collection object of the page this nav item represents (use this if you need to access page properties and attributes that aren't already available in the $navItem object)
  */
 
- echo '<ul class="nav sidenav fa-ul">'; //opens the top-level menu
+echo '<nav class="nav-sidebar">';
+echo '<ul class="nav sidenav fa-ul">'; //opens the top-level menu
  
 foreach ($navItems as $ni) {
 	if ($ni->hasSubmenu && $ni->level === 1){
@@ -66,3 +107,4 @@ foreach ($navItems as $ni) {
 }
 
 echo '</ul>'; //closes the top-level menu
+echo '</nav>';
