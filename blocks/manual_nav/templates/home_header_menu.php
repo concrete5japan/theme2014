@@ -4,7 +4,8 @@
 	<?php foreach ($links as $link): ?>
 		<li>
 			<a href ="<?php echo $link->url ?>" target="_self">
-				<?php if (empty(trim($link->cObj->getAttribute('nav_item_class')))) { ?>
+				<?php $nav_item_class = trim($link->cObj->getAttribute('nav_item_class')); ?>
+				<?php if (empty($nav_item_class)) { ?>
 					<i class="fa fa-lightbulb-o"></i>
 				<?php } else { ?>
 					<i class="<?php echo h($link->cObj->getAttribute('nav_item_class')) ?>"></i>
