@@ -68,42 +68,92 @@ $navItems = $controller->getNavItems();
  *	$navItem->cObj       : collection object of the page this nav item represents (use this if you need to access page properties and attributes that aren't already available in the $navItem object)
  */
 
-echo '<nav class="nav-sidebar">';
-echo '<ul class="nav sidenav fa-ul">'; //opens the top-level menu
- 
+
+/*** STEP 1 of 2: Determine all CSS classes (only 2 are enabled by default, but you can un-comment other ones or add your own) ***/
 foreach ($navItems as $ni) {
-	if ($ni->hasSubmenu && $ni->level === 1){
-		$menuno = $ni->cID;
-		echo '<li>';
-		echo '<a data-toggle="collapse" href="#collapse' . $menuno . '">';
-		echo '<i class="fa fa-chevron-right pull-right"></i>';
-		echo $ni->name;
-		echo '</a>';
-		if($ni->inPath) {
-			echo '<ul id="collapse' . $menuno . '" class="fa-ul collapse in">';
-		} else {
-			echo '<ul id="collapse' . $menuno . '" class="fa-ul collapse">';
-		}
-	} elseif($ni->isLast && $ni->level >= 3){
-		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-angle-right"></i>' . $ni->name . '</a></li>';
-		echo '</ul></li>';
-	} elseif($ni->hasSubmenu && $ni->level >= 2){
-		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-play"></i>' . $ni->name . '</a>';
-		echo '<ul class="fa-ul">';
-	} elseif($ni->isLast && $ni->level === 2) {
-		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-play"></i>' . $ni->name . '</a></li>';
-		echo '</ul></li>';
-	} elseif($ni->level >= 3) {
-		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-angle-right"></i>' . $ni->name . '</a></li>';
-	} elseif($ni->level === 2) {
-		echo '<li><a href="' . $ni->url . '"><i class="fa fa-li fa-play"></i>' . $ni->name . '</a></li>';
-	} else {
-		echo '<li><a href="' . $ni->url . '">';
-		echo '<i class="fa fa-chevron-right pull-right"></i>';
-		echo $ni->name;
-		echo '</a></li>';
+	$classes = array();
+
+	if ($ni->isCurrent) {
+		//class for the page currently being viewed
+		$classes[] = 'nav-selected';
 	}
 
+	if ($ni->inPath) {
+		//class for parent items of the page currently being viewed
+		$classes[] = 'nav-path-selected';
+	}
+	
+	if ($ni->level == 1) {
+		$classes[] = 'fa fa-chevron-right pull-right';
+	} elseif ($ni->level == 2) {
+		$classes[] = 'fa fa-li fa-play';
+	} else {
+		$classes[] = 'fa fa-li fa-angle-right';
+	}
+
+	/*
+	if ($ni->isFirst) {
+		//class for the first item in each menu section (first top-level item, and first item of each dropdown sub-menu)
+		$classes[] = 'nav-first';
+	}
+	*/
+
+	/*
+	if ($ni->isLast) {
+		//class for the last item in each menu section (last top-level item, and last item of each dropdown sub-menu)
+		$classes[] = 'nav-last';
+	}
+	*/
+
+	/*
+	if ($ni->hasSubmenu) {
+		//class for items that have dropdown sub-menus
+		$classes[] = 'nav-dropdown';
+	}
+	*/
+
+	/*
+	if (!empty($ni->attrClass)) {
+		//class that can be set by end-user via the 'nav_item_class' custom page attribute
+		$classes[] = $ni->attrClass;
+	}
+	*/
+
+	/*
+	if ($ni->isHome) {
+		//home page
+		$classes[] = 'nav-home';
+	}
+	*/
+
+	/*
+	//unique class for every single menu item
+	$classes[] = 'nav-item-' . $ni->cID;
+	*/
+
+	//Put all classes together into one space-separated string
+	$ni->classes = implode(" ", $classes);
+}
+
+
+
+//*** Step 2 of 2: Output menu HTML ***/
+
+echo '<nav class="nav-sidebar">';
+echo '<ul class="nav sidenav fa-ul">'; //opens the top-level menu
+
+foreach ($navItems as $ni) {
+
+	echo '<li>'; //opens a nav item
+
+	echo '<a href="' . $ni->url . '" target="' . $ni->target . '"><i class="' . $ni->classes . '"></i>' . $ni->name . '</a>';
+
+	if ($ni->hasSubmenu) {
+		echo '<ul class="fa-ul">'; //opens a dropdown sub-menu
+	} else {
+		echo '</li>'; //closes a nav item
+		echo str_repeat('</ul></li>', $ni->subDepth); //closes dropdown sub-menu(s) and their top-level nav item(s)
+	}
 }
 
 echo '</ul>'; //closes the top-level menu
