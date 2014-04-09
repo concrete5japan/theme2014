@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>concrete5 Japan 日本語公式サイト</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<h1 class="site-logo"><a href="http://concrete5-japan.org/"><img src="http://concrete5-japan.org/themes/c5japan2011/images/c5japanlogo.png" alt="concrete5 日本語公式サイト トップへ"></a></h1>
+				</div>
+				<div class="col-sm-6 hidden-xs">
+					<aside class="header-sns">
+						<ul class="fa-ul sns-link">
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
+						</ul>
+					</aside>
+				</div>
+			</div><!--row-->
+		</header>
+	</div><!--container-->
+
+	<nav class="navbar navbar-custom" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- <span class="navbar-menu">メニュー</span> -->
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav fa-ul">
+					<li><a href="/" target="_self"><i class="fa fa-home"></i> ホーム</a></li>
+					<li><a href="/about/" target="_self"><i class="fa fa-lightbulb-o"></i> concrete5とは</a></li>
+					<li><a href="/help/" target="_self"><i class="fa fa-bookmark"></i> 使い方</a></li>
+					<li><a href="/news/" target="_self"><i class="fa fa-flag"></i> お知らせ</a></li>
+					<li><a href="/community/" target="_self"><i class="fa fa-comments"></i> コミュニティ</a></li>
+					<li><a href="#" target="_self"><i class="fa fa-download"></i> ダウンロード</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right fa-ul">
+					<li><a href="/login/?rcID=1"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
+					<li><a href="/register/?rcID=1"><i class="fa fa-user"></i> 新規登録</a></li>
+				</ul>
+
+				<form action="http://www.google.co.jp/cse" id="cse-search-box" target="_blank" class="navbar-form" role="search">
+					<input type="hidden" name="cx" value="partner-pub-9838343653530325:5ay760-i2hu">
+					<input type="hidden" name="ie" value="UTF-8">
+					<div class="form-responsive">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+					</div>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="breadcrumb-container">
+		<nav class="container">
+			<ol class="breadcrumb">
+				<li><a href="#">ホーム</a></li>
+				<li><a href="#">ヘルプ</a></li>
+				<li><a href="#">インストール・アップグレード方法</a></li>
+				<li class="active">インストール準備</li>
+			</ol>
+		</nav>
+	</div>
+
+	<div class="container">
+		<article class="default-article">
+			<h1>concrete5 Japan 日本語公式サイトにログイン</h1>
+			<div class="row">
+				<div class="col-md-6">
+					<form class="form-horizontal form-login" role="form">
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="uName">ユーザーID</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" name="uName" id="uName" placeholder="ユーザーID">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="uPassword" class="col-sm-4 control-label">Password</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" name="uPassword" id="uPassword" placeholder="Password">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8">
+								<div class="checkbox">
+									<label for="uMaintainLogin">
+										<input type="checkbox" name="uMaintainLogin" id="uMaintainLogin" value="1"> Remember me
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8">
+								<button type="submit" class="btn btn-success"  id="submit" name="submit">サインイン <span class="fa fa-sign-in">&nbsp;</span></button>
+								<input type="hidden" name="rcID" value="1">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<h2>パスワードを忘れた方はこちら</h2>
+
+			<p>If you've forgotten your password, enter your email address below. We will reset it to a new password, and send the new one to you.</p>
+			<div class="row">
+				<div class="col-md-6">
+
+					<form class="form-horizontal form-password" role="form" method="post" action="/login/forgot_password/">
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="uEmail">メールアドレス</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" name="uEmail" placeholder="Email">
+							</div>
+							<input type="hidden" name="rcID" value="1">
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8">
+								<button type="submit" class="btn btn-success"  id="submit" name="submit">パスワードをリセット・メールで送信 <span class="fa fa-share">&nbsp;</span></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</article>
+	</div><!--container-->
+
+
+	<div class="home-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<nav class="footer-nav">
+						<ul class="fa-ul icon-play">
+							<li><a title="ホーム" href="/"><i class="fa-li fa fa-play"></i> ホーム</a></li>
+							<li><a title="concrete5とは" href="/about/"><i class="fa-li fa fa-play"></i> concrete5とは</a></li>
+							<li><a title="使い方" href="/help/"><i class="fa-li fa fa-play"></i> 使い方</a></li>
+							<li><a title="お知らせ" href="/news/"><i class="fa-li fa fa-play"></i> お知らせ</a></li>
+							<li><a title="コミュニティ" href="/community/"><i class="fa-li fa fa-play"></i> コミュニティ</a></li>
+							<li><a title="ダウンロード" href="/about/download/"><i class="fa-li fa fa-play"></i> ダウンロード</a></li>
+							<li><a title="お問い合わせ" href="/about/contact/"><i class="fa-li fa fa-play"></i> お問い合わせ</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-4">
+					<nav class="footer-nav">
+						<ul class="fa-ul icon-play">
+							<li><a href="http://facebook.com/concrete5japan" target="_blank"><i class="fa-li fa fa-play"></i> Facebook</a></li>
+							<li><a href="http://twitter.com/concrete5japan" target="_blank"><i class="fa-li fa fa-play"></i> Twitter</a></li>
+							<li><a href="https://plus.google.com/b/116552723583932615962/" target="_blank"><i class="fa-li fa fa-play"></i> Google+</a></li>
+							<li><a href="http://page.mixi.jp/view_page.pl?page_id=58513" target="_blank"><i class="fa-li fa fa-play"></i> Mixi</a></li>
+						</ul>
+						<ul class="fa-ul icon-play">
+							<li><a href="http://www.ustream.tv/channel/concrete5japan" target="_blank"><i class="fa-li fa fa-play"></i> Ustream</a></li>
+							<li><a href="http://youtube.com/concrete5japan" target="_blank"><i class="fa-li fa fa-play"></i> YouTube</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-4">
+					<nav class="footer-nav">
+						<ul class="fa-ul icon-play">
+							<li><a href="http://github.com/concrete5japan/concrete5/" target="_blank"><i class="fa-li fa fa-play"></i> GitHub</a></li>
+							<li><a href="https://www.transifex.com/projects/p/concrete5/language/ja_JP/" target="_blank"><i class="fa-li fa fa-play"></i> Transifex</a></li>
+						</ul>
+
+
+						<ul class="fa-ul icon-play">
+							<li><a href="http://concrete5.co.jp/" target="_blank"><i class="fa-li fa fa-play"></i> コンクリートファイブジャパン株式会社</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div><!--row-->
+		</div><!--container-->
+		<div class="container">
+			<footer>
+				<p>© 2009-2014 <a href="/">Concrete5 Japan Users Group</a> &amp; <a href="http://concrete5.org" target="_blank">Concrete CMS, Inc.</a>.<br>
+					concrete5はMITライセンスで配布されているオープンソースCMSです。<br>
+					"concrete5"のロゴならびに名称は、<a href="http://concrete5.org/" target="_blank">Concrete CMS, Inc.</a>と<a href="http://concrete5.co.jp/" target="_blank">コンクリートファイブジャパン株式会社</a>の登録商標です。<a href="/about/use_of_concrete5_logo/">名称とロゴの使用について</a>。<br>
+					All rights reserved. サイト内の情報の著作権は放棄しておりません。</p>
+				</footer>
+			</div><!--container-->
+		</div><!--home-footer-->
+
+	</body>
+	</html>
