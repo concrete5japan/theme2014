@@ -7441,7 +7441,7 @@ ul.first-ul > li:last-child {
 }
 
 .navbar-custom .navbar-nav > li > a {
-  padding: 15px 30px 10px 0;
+  padding-right: 30px;
   color: #20bde8;
   text-decoration: none;
 }
@@ -7592,6 +7592,11 @@ ul.first-ul > li:last-child {
     color: #555555;
     background-color: #e7e7e7;
   }
+}
+
+.nav > li > a {
+  padding: 0;
+  margin: 0;
 }
 
 .default-article {
