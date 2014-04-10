@@ -7737,6 +7737,14 @@ ul.first-ul > li:last-child {
   left: -1.5rem;
 }
 
+.form-login {
+  margin-top: 30px;
+}
+
+.form-password {
+  margin-top: 20px;
+}
+
 p.text-red {
   color: #fb6f83;
 }
