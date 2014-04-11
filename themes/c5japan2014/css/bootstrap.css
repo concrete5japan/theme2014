@@ -7720,19 +7720,19 @@ ul.first-ul > li:last-child {
   font-size: 7px;
 }
 
-.nav-sidebar > ul > li > ul > li > ul {
+.nav-sidebar > ul > li > ul > li ul {
   margin-left: 20px;
 }
 
-.nav-sidebar > ul > li > ul > li > ul > li {
+.nav-sidebar > ul > li > ul > li ul > li {
   font-size: 12px;
 }
 
-.nav-sidebar > ul > li > ul > li > ul > li > a {
+.nav-sidebar > ul > li > ul > li ul > li > a {
   padding: 0 3px 5px ;
 }
 
-.nav-sidebar > ul > li > ul > li > ul > li > a > i {
+.nav-sidebar > ul > li > ul > li ul > li > a > i {
   top: 0.2rem;
   left: -1.5rem;
 }
