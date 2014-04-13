@@ -62,12 +62,12 @@
 				$userName = '<i class="fa fa-user"></i>'.$u->getUserName();
 			}
 			?>
-		<ul class="nav navbar-nav navbar-right fa-ul">
+		<ul class="navbar-nav navbar-right fa-ul">
 				<li><?php echo t('Currently logged in as <b>%s</b>.', $userName)?></li>
 				<li><a href="<?php echo $this->url('/login', 'logout')?>"><i class="fa fa-sign-out"></i> <?php echo t('Sign Out')?></a></li>
 		</ul>
 		<?php  } else { ?>
-		<ul class="nav navbar-nav navbar-right fa-ul">
+		<ul class="navbar-nav navbar-right fa-ul">
 				<li><a href="<?php echo $this->url('/login')?>"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
 				<li><a href="<?php echo $this->url('/register')?>"><i class="fa fa-user"></i> 新規登録</a></li>
 		</ul>
