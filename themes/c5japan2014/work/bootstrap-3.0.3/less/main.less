@@ -352,7 +352,8 @@ ul.first-ul > li:last-child{
 			margin-left: 0;
 		}
 		> li > a {
-			padding: 15px 30px 10px 0;
+			padding-right: 30px;
+			padding-bottom: 10px;
 			color: @font-header-nav;
 			text-decoration: none;
 
@@ -514,6 +515,23 @@ ul.first-ul > li:last-child{
 	}
 }
 
+
+//login area
+//-------------------------
+@media (max-width: @grid-float-breakpoint-max){
+	.nav > li > a {
+		position: relative;
+		display: block;
+		padding: 10px 15px;
+	}
+	.navbar-right {
+		padding-left: 15px!important;
+	}
+}
+.nav > li > a {
+	padding: 0;
+	margin: 0;
+}
 
 //default
 //-------------------------

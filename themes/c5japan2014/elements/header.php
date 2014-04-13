@@ -62,7 +62,7 @@
 				$userName = '<i class="fa fa-user"></i>'.$u->getUserName();
 			}
 			?>
-		<ul class="navbar-nav navbar-right fa-ul">
+		<ul class="nav navbar-nav navbar-right fa-ul">
 				<li><?php echo t('Currently logged in as <b>%s</b>.', $userName)?></li>
 				<li><a href="<?php echo $this->url('/login', 'logout')?>"><i class="fa fa-sign-out"></i> <?php echo t('Sign Out')?></a></li>
 		</ul>
