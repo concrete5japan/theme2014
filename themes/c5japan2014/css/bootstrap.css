@@ -7474,6 +7474,10 @@ ul.first-ul > li:last-child {
   padding: 15px 0 10px 15px;
 }
 
+.navbar-custom .navbar-nav.navbar-right .logged-in i {
+  width: 15px;
+}
+
 @media (max-width: 767px) {
   .navbar-custom .navbar-nav {
     margin: 0;
