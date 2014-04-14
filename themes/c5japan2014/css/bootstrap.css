@@ -7440,13 +7440,8 @@ ul.first-ul > li:last-child {
   margin-left: 0;
 }
 
-.navbar-custom .navbar-nav > li {
-  padding-top: 15px;
-  padding-right: 30px;
-  padding-bottom: 10px;
-}
-
 .navbar-custom .navbar-nav > li > a {
+  padding: 15px 30px 10px 0;
   color: #20bde8;
   text-decoration: none;
 }
@@ -7464,18 +7459,19 @@ ul.first-ul > li:last-child {
   background-color: #e7e7e7;
 }
 
-.navbar-custom .navbar-nav.navbar-right > li {
+.navbar-custom .navbar-nav.navbar-right > li > a {
   padding-right: 0;
   padding-left: 15px;
-}
-
-.navbar-custom .navbar-nav.navbar-right > li > a {
   color: #777777;
 }
 
 .navbar-custom .navbar-nav.navbar-right > li > a:hover,
 .navbar-custom .navbar-nav.navbar-right > li > a:focus {
   color: #00aced;
+}
+
+.navbar-custom .navbar-nav.navbar-right .logged-in {
+  padding: 15px 0 10px 15px;
 }
 
 @media (max-width: 767px) {

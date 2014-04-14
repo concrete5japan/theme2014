@@ -351,14 +351,8 @@ ul.first-ul > li:last-child{
 		&.fa-ul{
 			margin-left: 0;
 		}
-		> li {
-			padding-right: 30px;
-			padding-bottom: 10px;
-			padding-top: 15px;
-		}
 		> li > a {
-			// padding-right: 30px;
-			// padding-bottom: 10px;
+			padding:15px 30px 10px 0;
 			color: @font-header-nav;
 			text-decoration: none;
 
@@ -377,16 +371,17 @@ ul.first-ul > li:last-child{
 			}
 		}
 		&.navbar-right{
-			> li  {
+			> li > a {
 				padding-right:0;
 				padding-left:15px;
-			}
-			> li > a {
 				color: @font-snslink;
 				&:hover,
 				&:focus {
 					color: @font-snslink-hover;
 				}
+			}
+			.logged-in{
+				padding:15px 0 10px 15px;
 			}
 		}
 	}
@@ -412,8 +407,6 @@ ul.first-ul > li:last-child{
 			}
 		}
 	}
-
-
 	.navbar-collapse {
 		padding-right: 0;
 		padding-left: 0;
@@ -452,6 +445,8 @@ ul.first-ul > li:last-child{
 			background-color: transparent;
 		}
 	}
+
+
 
 	@media (max-width: @grid-float-breakpoint-max) {
 		.navbar-header{
@@ -522,29 +517,6 @@ ul.first-ul > li:last-child{
 	}
 }
 
-
-// //login area
-// //-------------------------
-// @media (max-width: @grid-float-breakpoint-max){
-// 	.nav > li > a {
-// 		position: relative;
-// 		display: block;
-// 		padding: 10px 15px;
-// 	}
-// 	.nav > li {
-// 		position: relative;
-// 		display: block;
-// 		padding: 10px 15px;
-// 	}
-
-// 	.navbar-right {
-// 		//padding-left: 15px!important;
-// 	}
-// }
-// .nav > li > a {
-// 	padding: 0;
-// 	margin: 0;
-// }
 
 //default
 //-------------------------
