@@ -7440,9 +7440,13 @@ ul.first-ul > li:last-child {
   margin-left: 0;
 }
 
-.navbar-custom .navbar-nav > li > a {
+.navbar-custom .navbar-nav > li {
+  padding-top: 15px;
   padding-right: 30px;
   padding-bottom: 10px;
+}
+
+.navbar-custom .navbar-nav > li > a {
   color: #20bde8;
   text-decoration: none;
 }
@@ -7460,9 +7464,12 @@ ul.first-ul > li:last-child {
   background-color: #e7e7e7;
 }
 
-.navbar-custom .navbar-nav.navbar-right > li > a {
+.navbar-custom .navbar-nav.navbar-right > li {
   padding-right: 0;
   padding-left: 15px;
+}
+
+.navbar-custom .navbar-nav.navbar-right > li > a {
   color: #777777;
 }
 
@@ -7593,22 +7600,6 @@ ul.first-ul > li:last-child {
     color: #555555;
     background-color: #e7e7e7;
   }
-}
-
-@media (max-width: 767px) {
-  .nav > li > a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-  }
-  .navbar-right {
-    padding-left: 15px!important;
-  }
-}
-
-.nav > li > a {
-  padding: 0;
-  margin: 0;
 }
 
 .default-article {
