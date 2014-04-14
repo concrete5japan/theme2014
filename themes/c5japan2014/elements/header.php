@@ -63,7 +63,7 @@
 			}
 			?>
 		<ul class="nav navbar-nav navbar-right fa-ul">
-				<li><?php echo t('Currently logged in as <b>%s</b>.', $userName)?></li>
+				<li class="logged-in"><?php echo t('Currently logged in as <b>%s</b>.', $userName)?></li>
 				<li><a href="<?php echo $this->url('/login', 'logout')?>"><i class="fa fa-sign-out"></i> <?php echo t('Sign Out')?></a></li>
 		</ul>
 		<?php  } else { ?>
