@@ -19,4 +19,5 @@ $v->setThemeByPath('/login', "c5japan2014");
 $v->setThemeByPath('/page_forbidden', "c5japan2014");
 $v->setThemeByPath('/not_found', "c5japan2014");
 $v->setThemeByPath('/register', "c5japan2014");
+$v->setThemeByPath('/profile', "c5japan2011");
 
