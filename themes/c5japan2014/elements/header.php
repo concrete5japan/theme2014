@@ -72,15 +72,15 @@
 				<li><a href="<?php echo $this->url('/register')?>"><i class="fa fa-user"></i> 新規登録</a></li>
 		</ul>
 		<?php  } ?>
-
-		<form action="http://www.google.co.jp/cse" id="cse-search-box" target="_blank" class="navbar-form" role="search">
-				<input type="hidden" name="cx" value="partner-pub-9838343653530325:5ay760-i2hu">
+			<form action="http://concrete5-japan.org/search/" id="cse-search-box" class="navbar-form" role="search">
+				<input type="hidden" name="cx" value="partner-pub-9838343653530325:5379575045">
+				<input type="hidden" name="cof" value="FORID:10">
 				<input type="hidden" name="ie" value="UTF-8">
 				<div class="form-responsive">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
+						<input type="text" class="form-control" name="q" placeholder="Search">
 					</div>
-					<button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+					<button type="submit" name="sa" class="btn-search"><i class="fa fa-search"></i></button>
 				</div>
 			</form>
 	<!--      <form class="navbar-form navbar-left" role="search">
