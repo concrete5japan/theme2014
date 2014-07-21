@@ -1,5 +1,5 @@
 <?php	 defined('C5_EXECUTE') or die("Access Denied.");
-$navItems = $controller->getNavItems();
+$navItems = $controller->getNavItems(true);
 ?>
 
 <ol class="breadcrumb">
