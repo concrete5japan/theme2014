@@ -3,8 +3,14 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php');
 ?>
 
-<div class="container">
-
+<div class="breadcrumb-container">
+	<nav class="container">
+		<?php
+		    $a = new GlobalArea('Header');
+		    $a->display();
+		?>
+	</nav>
+</div>
 	<?php if (isset($error) && $error != '') {
 		if ($error instanceof Exception) {
 			$_error[] = $error->getMessage();
@@ -17,6 +23,7 @@ $this->inc('elements/header.php');
 		}
 		
 		if($_error) { ?>
+<div class="container">
 		<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 		<div class="alert alert-danger">
@@ -27,11 +34,18 @@ $this->inc('elements/header.php');
 		</div>
 		</div>
 		</div>
+</div>
 	<?php } ?>
 
+<div class="container">
+	<div class="row">
+		<div id="main" role="main">
+			<article class="default-article">
 	<?php print $innerContent; ?>
+			</article>
+		</div>
+	</div>
 </div>
-
 <!-- end full width content area -->
 
 <?php $this->inc('elements/footer.php'); ?>
