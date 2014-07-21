@@ -35,7 +35,7 @@ div.ccm-discussion-message-info {padding: 4px; margin-top: 8px; background-color
 div.ccm-discussion-message-tags { font-size: 10px; line-height: 12px; }
 
 /* discussion comment formatting */
-div.ccm-discussion-threaded-comment h3 { font-size:16px; line-height:16px;margin-bottom: 0px}
+div.ccm-discussion-threaded-comment h3 { font-size:16px; line-height:16px;margin-bottom: 0px; margin-top:10px !important;} /* margin-top hack */
 div.ccm-discussion-threaded-comment div.ccm-discussion-post-body, div.ccm-discussion-threaded-comment h3, div.ccm-discussion-threaded-comment div.ccm-discussion-post-time { padding-left:100px; }
 div.ccm-discussion-threaded-comment div.u-avatar-box { float:left; text-align: center; width: 80px}
 div.ccm-discussion-post-time { font-size: 11px; color:#666; margin-bottom: 8px}
@@ -44,7 +44,7 @@ div.ccm-discussion-comment-level-1 {margin-left: 40px !important}
 div.ccm-discussion-comment-level-2 {margin-left: 80px !important}
 div.ccm-discussion-comment-level-3 {margin-left: 120px !important}
 div.ccm-discussion-comment-wrapper {margin-left: 160px}
-div.ccm-discussion-threaded-comment {margin-bottom: 40px}
+div.ccm-discussion-threaded-comment {margin-bottom: 10px} /* 2014 hack */
 div.ccm-discussion-main-message {padding-bottom: 12px}
 
 div.ccm-discussion-main-message div.u-avatar-box {float: right; text-align: center; width: 80px}
