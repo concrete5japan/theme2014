@@ -18,6 +18,10 @@ $this->inc('elements/header.php');
 			<article class="default-article">
 		    		<h1><?php echo h($c->getCollectionName()); ?></h1>
 					<?php
+					$a = new GlobalArea('SocialButtonTop');
+					if ($c->isEditMode() | $a->getTotalBlocksInArea($c) > 0) {
+						$a->display();
+					}
 					$week = array("(日) ", "(月) ", "(火) ", "(水) ", "(木) ", "(金) ", "(土)");
 					$event_start	= strtotime($c->getCollectionAttributeValue("event_start"));
 					$event_start_d	= date('Y年m月d日 ', $event_start);
@@ -39,6 +43,10 @@ $this->inc('elements/header.php');
 					}
 					$a = new Area('Main');
 					$a->display($c);
+					$a = new GlobalArea('SocialButtonButtom');
+					if ($c->isEditMode() | $a->getTotalBlocksInArea($c) > 0) {
+						$a->display();
+					}
 				?>
 			</article>
 		</div>

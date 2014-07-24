@@ -1,6 +1,7 @@
 <?php
 defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php');
+$c = Page::getCurrentPage();
 ?>
 
 <div class="breadcrumb-container">
@@ -17,8 +18,16 @@ $this->inc('elements/header.php');
 		<div id="main" class="col-md-8" role="main">
 			<article class="default-article">
 				<?php
+					$a = new GlobalArea('SocialButtonTop');
+					if ($c->isEditMode() | $a->getTotalBlocksInArea($c) > 0) {
+						$a->display();
+					}
 					$a = new Area('Main');
 					$a->display($c);
+					$a = new GlobalArea('SocialButtonButtom');
+					if ($c->isEditMode() | $a->getTotalBlocksInArea($c) > 0) {
+						$a->display();
+					}
 				?>
 			</article>
 		</div>
