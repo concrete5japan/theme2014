@@ -320,13 +320,13 @@ textarea {
 }
 
 a {
-  color: #000000;
+  color: #4183c4;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #000000;
+  color: #2c5d8d;
   text-decoration: underline;
 }
 
@@ -2579,7 +2579,7 @@ fieldset[disabled] .btn-info.active {
 
 .btn-link {
   font-weight: normal;
-  color: #000000;
+  color: #4183c4;
   cursor: pointer;
   border-radius: 0;
 }
@@ -2602,7 +2602,7 @@ fieldset[disabled] .btn-link {
 
 .btn-link:hover,
 .btn-link:focus {
-  color: #000000;
+  color: #2c5d8d;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4126,7 +4126,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #000000;
+  border-color: #4183c4;
 }
 
 .nav .nav-divider {
@@ -5212,7 +5212,7 @@ a.badge:focus {
 
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #000000;
+  color: #4183c4;
   background-color: #ffffff;
 }
 
@@ -5287,7 +5287,7 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #000000;
+  border-color: #4183c4;
 }
 
 .thumbnail .caption {
@@ -7442,7 +7442,7 @@ ul.first-ul > li:last-child {
 
 .navbar-custom .navbar-nav > li > a {
   padding: 15px 30px 10px 0;
-  color: #20bde8;
+  color: #4183c4;
   text-decoration: none;
 }
 
@@ -7636,7 +7636,7 @@ ul.first-ul > li:last-child {
 .default-article a {
   display: inline-block;
   padding: 0 2px;
-  color: #20bde8;
+  color: #4183c4;
   text-decoration: underline;
 }
 
