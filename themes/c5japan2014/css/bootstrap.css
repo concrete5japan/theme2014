@@ -7788,3 +7788,11 @@ section.outline ul li a i {
 .help .row .tile {
   margin-bottom: 30px;
 }
+
+/*--------------------------------*/
+
+.default-article img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
