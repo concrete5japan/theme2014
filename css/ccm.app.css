@@ -596,10 +596,12 @@ div.ccm-ui textarea {
 	color:#333;
 }
 
-.ccm-ui input,.ccm-ui textarea,.ccm-ui select,.ccm-ui .uneditable-input {
+.ccm-ui input,
+.ccm-ui textarea,
+.ccm-ui select,
+.ccm-ui .uneditable-input {
 	display:inline-block;
 	width:210px;
-	height:18px;
 	padding:4px;
 	margin-bottom:9px;
 	font-size:13px;
@@ -610,6 +612,12 @@ div.ccm-ui textarea {
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
 	border-radius:3px;
+}
+
+.ccm-ui textarea,
+.ccm-ui select,
+.ccm-ui .uneditable-input {
+	height:18px;
 }
 
 .ccm-ui .uneditable-textarea {
