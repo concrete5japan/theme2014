@@ -1,4 +1,6 @@
-<?php defined('C5_EXECUTE') or die("Access Denied."); ?>
+<?php defined('C5_EXECUTE') or die("Access Denied.");
+$c = Page::getCurrentPage();
+?>
 <!doctype html>
 <html lang="<?php echo LANGUAGE ?>">
 <head>
@@ -69,7 +71,7 @@
 		</ul>
 		<?php  } else { ?>
 		<ul class="nav navbar-nav navbar-right fa-ul">
-				<li><a href="<?php echo $this->url('/login')?>"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
+				<li><a href="<?php echo $this->url('/login', 'forward') . $c->getCollectionID() . '/';?>"><i class="fa fa-unlock-alt"></i> ログイン</a></li>
 				<li><a href="<?php echo $this->url('/register')?>"><i class="fa fa-user"></i> 新規登録</a></li>
 		</ul>
 		<?php  } ?>
