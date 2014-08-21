@@ -59,3 +59,9 @@ h3.parter-case-title {
 .partner-columnhead {
 	word-break: keep-all;
 }
+
+
+.form-group .controls input.ccm-input-text,
+.form-group .controls textarea.ccm-input-textarea {
+	width:80%;
+}
