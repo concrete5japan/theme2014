@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/main.css">
     <script src="<?php echo $this->getThemePath(); ?>/js/bootstrap.min.js"></script>
 </head>
 

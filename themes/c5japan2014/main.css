@@ -1,0 +1,61 @@
+.partner-list,
+.partner-case-list {
+	border-top: dotted 2px #aaa;
+}
+
+.partner-logo,
+.partner-case-image{
+	display:block;
+	margin:0;
+	padding:0;
+}
+
+h3.parter-title,
+h3.parter-case-title {
+	margin:0;
+	margin-bottom: 16px;
+	font-size:16px;
+	font-weight:bold;
+	line-height:1.2em;
+}
+
+.partner-type,
+.partner-case-type{
+	display:block;
+	padding: 0;
+	margin:0;
+	margin-bottom:3px;
+}
+
+.partner-desc,
+.partner-case-desc {
+	margin:0px;
+	margin-bottom:16px;
+}
+
+.partner-divider,
+.partner-case-divider {
+	border-bottom: dotted 2px #aaa;
+	padding-top: 2em;
+}
+
+.partner-case-credit {
+	background-color:#eee;
+	padding:20px;
+}
+
+.partner-case-credit h3 {
+	margin:0px;
+}
+
+.partner-url {
+	-ms-word-break: break-all;
+     word-break: break-all;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
+.partner-columnhead {
+	word-break: keep-all;
+}
