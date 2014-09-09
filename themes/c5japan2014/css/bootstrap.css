@@ -7799,19 +7799,19 @@ section.outline ul li a i {
 
 /*--------------------------------*/
 
-#sidebar ul {
+#right_nav ul {
   list-style: none;
 }
 
-#sidebar a {
+#right_nav a {
   text-decoration: none;
 }
 
-#sidebar a:hover li {
+#right_nav a:hover li {
   opacity: 0.8;
 }
 
-#sidebar li {
+#right_nav li {
   width: 360px;
   height: 50px;
   margin-bottom: 10px;
@@ -7819,11 +7819,11 @@ section.outline ul li a i {
   background: #363a58;
 }
 
-#sidebar li.twitter {
+#right_nav li.twitter {
   background: #44AEF0;
 }
 
-#sidebar li p {
+#right_nav li p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -7831,21 +7831,21 @@ section.outline ul li a i {
           transform: translateY(-50%);
 }
 
-#sidebar .icon {
+#right_nav .icon {
   margin: 0 15px;
 }
 
-#sidebar .iconl {
+#right_nav .iconl {
   margin-right: 12px;
   margin-left: 8px;
 }
 
-#sidebar .iconr {
+#right_nav .iconr {
   margin-left: 15px;
 }
 
 @media (max-width: 768px) {
-  #sidebar li {
+  #right_nav li {
     width: 80%;
   }
 }
