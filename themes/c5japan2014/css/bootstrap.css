@@ -7796,3 +7796,56 @@ section.outline ul li a i {
   height: auto;
   max-width: 100%;
 }
+
+/*--------------------------------*/
+
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar a {
+  text-decoration: none;
+}
+
+#sidebar a:hover li {
+  opacity: 0.8;
+}
+
+#sidebar li {
+  width: 360px;
+  height: 50px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  background: #363a58;
+}
+
+#sidebar li.twitter {
+  background: #44AEF0;
+}
+
+#sidebar li p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#sidebar .icon {
+  margin: 0 15px;
+}
+
+#sidebar .iconl {
+  margin-right: 12px;
+  margin-left: 8px;
+}
+
+#sidebar .iconr {
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  #sidebar li {
+    width: 80%;
+  }
+}

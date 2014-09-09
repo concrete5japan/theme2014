@@ -705,3 +705,48 @@ section.outline {
 	.img-responsive();
 	}
 }
+
+
+//right-sidebar
+/*--------------------------------*/
+#sidebar ul {
+	list-style: none;
+}
+#sidebar a {
+	text-decoration: none;
+}
+#sidebar a:hover li {
+	opacity: 0.8;
+}
+#sidebar li {
+	width: 360px;
+	height: 50px;
+	background: @font-h1-default;
+	margin-bottom: 10px;
+	color: @body-bg;
+}
+#sidebar li.twitter {
+	background: #44AEF0;
+}
+#sidebar li p {
+	 position: relative;
+	 top: 50%;
+	 -webkit-transform: translateY(-50%);
+	 -ms-transform: translateY(-50%);
+	 transform: translateY(-50%);
+}
+#sidebar .icon {
+	margin: 0 15px;
+}
+#sidebar .iconl {
+	margin-right: 12px;
+	margin-left: 8px;
+}
+#sidebar .iconr {
+	margin-left: 15px;
+}
+@media (max-width: @grid-float-breakpoint) {
+	#sidebar li{
+		width: 80%;
+	}
+}
