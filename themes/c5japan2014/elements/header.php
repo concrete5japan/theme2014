@@ -4,6 +4,27 @@ $c = Page::getCurrentPage();
 <!doctype html>
 <html lang="<?php echo LANGUAGE ?>">
 <head>
+<!--
+concrete5 Japan 2014 Theme is created by
+
+<< Direction >>
+Takuro Hishikawa	@HissyNC	(http://concrete5.co.jp/)
+Katz Ueno		@katzueno	(http://concrete5.co.jp/)
+Hirofumi Inoue		@acliss19xx	(concrete5 Kansai User Group)
+
+<< Design >>
+Atsushi Sugiyama	@pictron2009	(http://pictron.net)
+
+<< Coding >>
+Naoko Tokumoto		@twit_natasha	(http://natasha.jp/)
+Junko Kodera		@kozaru_kodera	(http://corogari.net/)
+
+<< Special Thanks >>
+Kojiro Fukazawa, Kazuki Maruyama, Hisayoshi Izaki, Hiromasa Ishizaki, Mami Kuroki, Takayuki Kaneko, Kawaguchan, Yoshiko Sarakai, Shinichi Nakane, Tomohisa Yoshikawa, Yuriko Horikawa
+
+JUSO Coworking
+
+-->
 	<?php Loader::element('header_required'); ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +32,7 @@ $c = Page::getCurrentPage();
 	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/main.css">
     <script src="<?php echo $this->getThemePath(); ?>/js/bootstrap.min.js"></script>
+    
 </head>
 
 <body>
