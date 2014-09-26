@@ -14,15 +14,14 @@ $img = $c->getAttribute('page_thumbnail');
 $thumb = $ih->getThumbnail($img, 375, 2000, false);
 $caseurl = $th->sanitize($c->getAttribute('partner_case_url'));		
 
-$role = $c->getAttribute('partner_case_role');
-echo '<!--
-';
-var_dump($role);
-echo '-->';
+$role = $th->entities($c->getAttribute('partner_case_role'));
 $role = str_replace ("\n", ', ', $role);
 
 $category = $th->entities($c->getAttribute('partner_case_category'));
 $category = str_replace ("\n", ', ', $category);
+
+$period = $th->entities($c->getAttribute('partner_case_period'));
+$totalpages = $th->entities($c->getAttribute('partner_case_pages'));
 
 
 // Get the parent ID
@@ -44,7 +43,12 @@ $dept = $th->entities($ParentPage->getAttribute('partner_department'));
 $tel = $th->entities($ParentPage->getAttribute('partner_tel'));
 $fax = $th->entities($ParentPage->getAttribute('partner_fax'));
 $email = $th->sanitize($ParentPage->getAttribute('partner_email'));
-$partnerUrl = $th->sanitize($ParentPage->getAttribute('partner_url'));		
+$partnerUrl = $th->sanitize($ParentPage->getAttribute('partner_url'));
+
+$gaTrackingCaseURL = 'onClick="ga(\'send\', \'event\', \'partnerCaseLink\', \'click\', \'' . $caseurl .'\'); " ';
+$gaTrackingCompURL = 'onClick="ga(\'send\', \'event\', \'partnerCompLink\', \'click\', \'' . $partnerUrl .'\'); " ';
+$gaTrackingEmail = 'onClick="ga(\'send\', \'event\', \'partnerEmail\', \'click\', \'' . $email .'\'); " ';
+
 ?>
 
 <div class="breadcrumb-container">
@@ -71,7 +75,7 @@ $partnerUrl = $th->sanitize($ParentPage->getAttribute('partner_url'));
 <div class="row"><h1 class="parter-case-title">事例：<?php echo $title ?></h1></div>
 <div class="row">
 	<div class="partner-case-image col-sm-6 col-sm-push-6">
-		<?php if ($caseurl) { ?><a href="<?php echo $caseurl ?>" target="<?php echo $target ?>"><?php } ?><img src="<?php echo $thumb->src ?>" width="<?php echo $thumb->width ?>" height="<?php echo $thumb->height ?>" alt="" class="img-thumbnail" /><?php if ($caseurl) { ?></a><?php } ?>
+		<?php if ($caseurl) { ?><a href="<?php echo $caseurl ?>" target="_blank" <?php echo $gaTrackingCaseURL ?>><?php } ?><img src="<?php echo $thumb->src ?>" width="<?php echo $thumb->width ?>" height="<?php echo $thumb->height ?>" alt="" class="img-thumbnail" /><?php if ($caseurl) { ?></a><?php } ?>
 	</div>
 	<div class="col-sm-6 col-sm-pull-6">
 	<div class="partner-case-desc">
@@ -80,11 +84,15 @@ $partnerUrl = $th->sanitize($ParentPage->getAttribute('partner_url'));
 	<table class="partner-address table table-striped table-bordered">
 	<?php
 	if ($caseurl) echo '
-<tr><th class="info partner-columnhead">URL:</th><td class="partner-url"><a href="'. $caseurl . '" target="_blank">'. $caseurl . '</a></td></tr>
+<tr><th class="info partner-columnhead">URL:</th><td class="partner-url"><a href="'. $caseurl . '" target="_blank" ' . $gaTrackingCaseURL . ' >'. $caseurl . '</a></td></tr>
 ';
 	if ($role) echo '<tr><th class="info">担当:</th><td>' . $role . '</td></tr>
 ';
 	if ($category) echo '<tr><th class="info partner-columnhead">カテゴリ:</th><td>' . $category . '</td></tr>
+';
+	if ($period) echo '<tr><th class="info partner-columnhead">制作・開発期間:</th><td>' . $period . '</td></tr>
+';
+	if ($totalpages) echo '<tr><th class="info partner-columnhead">ページ数:</th><td>' . $totalpages . '</td></tr>
 ';
 ?>
 	</table>
@@ -111,7 +119,7 @@ $partnerUrl = $th->sanitize($ParentPage->getAttribute('partner_url'));
 			<dl class="dl-horizontal">
 			<?php
 			if ($partnerUrl) echo '
-			<dt class="partner-columnhead">ウェブサイト:</dt><dd class="partner-url"><a href="'. $partnerUrl . '" target="_blank">'. $partnerUrl . '</a></dd>
+			<dt class="partner-columnhead">ウェブサイト:</dt><dd class="partner-url"><a href="'. $partnerUrl . '" target="_blank" ' . $gaTrackingCompURL .'>'. $partnerUrl . '</a></dd>
 			';
 			if ($address1) echo '<dt>住所:</dt>
 			<dd>' . $zip . '<br>' . $address1;
@@ -123,7 +131,7 @@ $partnerUrl = $th->sanitize($ParentPage->getAttribute('partner_url'));
 			';
 			if ($fax) echo '<dt>FAX:</dt><dd> ' . $fax . '</dd>
 			';
-			if ($email) echo '<dt>Email:</dt><dd><a href="mailto:'. $email . '">お問合せ</a></dd>
+			if ($email) echo '<dt>Email:</dt><dd><a href="mailto:'. $email . '" ' . $gaTrackingEmail . '>お問合せ</a></dd>
 			';
 			?>
 			</dl>
@@ -132,8 +140,6 @@ $partnerUrl = $th->sanitize($ParentPage->getAttribute('partner_url'));
 	</div>
 </div>
 <?php					
-					$a = new Area('Main');
-					$a->display($c);
 					$a = new GlobalArea('SocialButton');
 					$a->display();
 				?>

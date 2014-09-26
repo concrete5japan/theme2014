@@ -22,6 +22,10 @@ $tel = $th->entities($c->getAttribute('partner_tel'));
 $fax = $th->entities($c->getAttribute('partner_fax'));
 $email = $th->sanitize($c->getAttribute('partner_email'));
 $partnerurl = $th->sanitize($c->getAttribute('partner_url'));		
+
+$gaTrackingCompURL = 'onClick="ga(\'send\', \'event\', \'partnerCompLink\', \'click\', \'' . $partnerurl .'\'); " ';
+$gaTrackingEmail = 'onClick="ga(\'send\', \'event\', \'partnerEmail\', \'click\', \'' . $email .'\'); " ';
+
 ?>
 
 <div class="breadcrumb-container">
@@ -60,7 +64,7 @@ $partnerurl = $th->sanitize($c->getAttribute('partner_url'));
 <table class="partner-address table table-striped table-bordered">
 <?php
 if ($partnerurl) echo '
-<tr><th class="info partner-columnhead">ウェブサイト</th><td class="partner-url"><a href="'. $partnerurl . '" target="_blank">'. $partnerurl . '</a></td></tr>
+<tr><th class="info partner-columnhead">ウェブサイト</th><td class="partner-url"><a href="'. $partnerurl . '" target="_blank" ' . $gaTrackingCompURL . '>'. $partnerurl . '</a></td></tr>
 ';
 if ($address1) echo '<tr><th class="info">住所</th>
 <td>' . $zip . '<br>' . $address1;
@@ -72,7 +76,7 @@ if ($tel) echo '<tr><th class="info">TEL:</th><td>' . $tel . '</td></tr>
 ';
 if ($fax) echo '<tr><th class="info">FAX:</th><td>' . $fax . '</td></tr>
 ';
-if ($email) echo '<tr><th class="info">Email</th><td><a href="mailto:'. $email . '">お問合せ</a></td></tr>
+if ($email) echo '<tr><th class="info">Email</th><td><a href="mailto:'. $email . '" ' . $gaTrackingEmail . '>お問合せ</a></td></tr>
 ';
 ?>
 </table>
