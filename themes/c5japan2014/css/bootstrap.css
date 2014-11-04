@@ -7608,20 +7608,26 @@ ul.first-ul > li:last-child {
 }
 
 .default-article h1 {
-  padding-bottom: 20px;
+  padding-bottom: 26px;
+  margin-bottom: 20px;
   font-size: 26.400000000000002px;
+  font-weight: bold;
   color: #363a58;
   background: url('../work/images/h1_bg_gray.png') bottom left repeat-x;
 }
 
 .default-article h2 {
   margin-top: 60px;
+  margin-bottom: 20px;
   font-size: 24px;
+  font-weight: bold;
 }
 
 .default-article h3 {
   margin-top: 40px;
+  margin-bottom: 20px;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .default-article h4 {
