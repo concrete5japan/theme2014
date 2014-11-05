@@ -16,7 +16,7 @@ Hirofumi Inoue		@acliss19xx	(concrete5 Kansai User Group)
 Atsushi Sugiyama	@pictron2009	(http://pictron.net)
 
 << Coding >>
-Naoko Tokumoto		@twit_natasha	(http://natasha.jp/)
+Nahoko Tokumoto		@twit_natasha	(http://natasha.jp/)
 Junko Kodera		@kozaru_kodera	(http://corogari.net/)
 
 << Special Thanks >>
