@@ -108,6 +108,10 @@ img.u-avatar {
 	max-width: 80px;
 }
 
+h3.ccm-page-list-title {
+	margin-bottom: 0;	
+}
+
 .ccm-page-list-date {
 	font-style: italic;
 }
